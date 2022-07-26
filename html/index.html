@@ -5,30 +5,228 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
     <meta name="referrer" content="no-referrer" />
-    <title>Document</title>
+    <title>랑벨, Simple Perfection</title>
     <!-- favicon -->
-
+    <link rel="shortcut icon" href="../images/common/favicon.ico" type="image/x-icon" />
     <!-- reset -->
     <link rel="stylesheet" href="../css/reset.css" />
-
     <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Lato:wght@100;300;400;700;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet" />
-
     <!-- css -->
-    <link rel="stylesheet" href="../css/aos.css" />
-    <link rel="stylesheet" href="../css/splitting.css" />
     <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
 
     <!-- local css -->
     <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/layout.min.css" />
+    <link rel="stylesheet" href="../css/main.min.css" />
 
     <!-- js -->
-    <script src="../js/aos.js"></script>
     <script src="../js/gsap.min.js"></script>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/splitting.js"></script>
     <script src="../js/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header class="headerWrap">
+      <div id="headerLabel">
+        <div class="container">
+          <a href="">
+            <p>회원가입하면 <strong>3,000원</strong> 즉시지급</p>
+          </a>
+        </div>
+        <div class="close">
+          <button class="closeBtn"><img src="../images/common/HeaderCloseMark.png" alt="닫기" /></button>
+        </div>
+      </div>
+      <div id="header">
+        <div class="container">
+          <div class="loginMenu">
+            <ul>
+              <li><a href="">LOGIN</a></li>
+              <li><a href="">JOIN</a></li>
+              <li><a href="">MYPAGE</a></li>
+              <li><a href="">STORES</a></li>
+              <li><a href="">KOR</a></li>
+            </ul>
+          </div>
+          <h1 id="logo"><img src="../images/common/logo.png" alt="로고" /></h1>
+          <div id="gnb">
+            <h2 class="blind">gnb</h2>
+            <div class="menu">
+              <ul class="list">
+                <li>
+                  <a href="" class="depth01">Shop</a>
+                  <div class="depth02Wrap">
+                    <div class="container">
+                      <div class="menuList">
+                        <ul>
+                          <h3>전 제품보기</h3>
+                          <li><a href="">전제품보기</a></li>
+                          <li><a href="">프로모션</a></li>
+                        </ul>
+                        <ul>
+                          <h3>품목별</h3>
+                          <li><a href="">클렌징</a></li>
+                          <li><a href="">토너/패드</a></li>
+                          <li><a href="">앰플/세럼</a></li>
+                          <li><a href="">오일</a></li>
+                          <li><a href="">크림</a></li>
+                          <li><a href="">선크림</a></li>
+                          <li><a href="">뷰티 소품</a></li>
+                        </ul>
+                        <ul>
+                          <h3>라인별</h3>
+                          <li><a href="">내츄럴 딥</a></li>
+                          <li><a href="">내츄럴 프레시</a></li>
+                          <li><a href="">랑바이오</a></li>
+                          <li><a href="">비타 에너지</a></li>
+                          <li><a href="">수퍼내츄럴</a></li>
+                          <li><a href="">울트라리프팅</a></li>
+                        </ul>
+                        <ul>
+                          <h3>기능별</h3>
+                          <li><a href="">수분/보습</a></li>
+                          <li><a href="">진정/쿨링</a></li>
+                          <li><a href="">탄력/주름개선</a></li>
+                          <li><a href="">미백</a></li>
+                          <li><a href="">모공/각질</a></li>
+                          <li><a href="">피부장벽</a></li>
+                          <li><a href="">자외선 차단</a></li>
+                        </ul>
+                      </div>
+                      <ul class="depth02Img">
+                        <li>
+                          <a href=""><img src="../images/common/depth02img01.png" alt="랑바이오블랙시카퀵패드" /></a>
+                          <p>랑바이오 블랙 시카 퀵 패드</p>
+                        </li>
+                        <li>
+                          <a href=""><img src="../images/common/depth02img02.png" alt="랑바이오블랙시카크림" /></a>
+                          <p>랑바이오 블랙 시카 크림</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="depth01">Brand</a>
+                  <div class="depth02Wrap">
+                    <div class="container">
+                      <ul class="columnDepth02 fontCormorant">
+                        <li>
+                          <a href=""><h3>Brand Story</h3></a>
+                        </li>
+                        <li>
+                          <a href=""><h3>Lanny's Message</h3></a>
+                        </li>
+                      </ul>
+                      <ul class="depth02Img">
+                        <a href="">
+                          <img src="../images/common/depth02img03.png" alt="내츄럴프레시업선크림" />
+                        </a>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="depth01">New&Best</a>
+                  <div class="depth02Wrap" style="display: none"></div>
+                </li>
+                <li>
+                  <a href="" class="depth01">Event</a>
+                  <div class="depth02Wrap">
+                    <div class="container">
+                      <ul class="columnDepth02">
+                        <li>
+                          <a href=""><h3>전체</h3></a>
+                        </li>
+                        <li>
+                          <a href=""><h3>기획전</h3></a>
+                        </li>
+                        <li>
+                          <a href=""><h3>진행중 이벤트</h3></a>
+                        </li>
+                        <li>
+                          <a href=""><h3>당첨자 발표</h3></a>
+                        </li>
+                        <li>
+                          <a href=""><h3>종료된 이벤트</h3></a>
+                        </li>
+                      </ul>
+                      <ul class="depth02Img">
+                        <a href="">
+                          <img src="../images/common/depth02img03.png" alt="내츄럴프레시업선크림" />
+                        </a>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="depth01">Lanbelle Channel</a>
+                  <div class="depth02Wrap">
+                    <div class="container">
+                      <ul class="columnDepth02">
+                        <li>
+                          <a href=""><h3>홈</h3></a>
+                        </li>
+                        <li>
+                          <a href=""><h3>지금 여기, 랑벨</h3></a>
+                        </li>
+                        <li>
+                          <a href=""><h3>꿀팁</h3></a>
+                        </li>
+                        <li>
+                          <a href=""><h3>랑벨 방송국</h3></a>
+                        </li>
+                      </ul>
+                      <ul class="depth02Img">
+                        <a href="">
+                          <img src="../images/common/depth02img03.png" alt="내츄럴프레시업선크림" />
+                        </a>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="depth01">Community</a>
+                  <div class="depth02Wrap">
+                    <div class="container">
+                      <ul class="columnDepth02">
+                        <li>
+                          <a href=""><h3>공지사항</h3></a>
+                        </li>
+                        <li>
+                          <a href=""><h3>자주하는 질문</h3></a>
+                        </li>
+                        <li>
+                          <a href=""><h3>Membership</h3></a>
+                        </li>
+                      </ul>
+                      <ul class="depth02Img">
+                        <a href="">
+                          <img src="../images/common/depth02img03.png" alt="내츄럴프레시업선크림" />
+                        </a>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="utilMenu">
+                <li>
+                  <a href=""><img src="../images/common/search_icon.png" alt="검색" /></a>
+                </li>
+                <li>
+                  <a href=""><img src="../images/common/cart.png" alt="장바구니" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+  <script src="../js/layout.js"></script>
 </html>

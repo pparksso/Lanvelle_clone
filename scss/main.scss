@@ -1,0 +1,43 @@
+#mainVisual {
+  position: relative;
+  ul li a {
+    .txtBox {
+      position: absolute;
+      top: 35%;
+      left: 10%;
+      color: #000;
+      &.white {
+        color: #fff;
+      }
+      .title {
+        font-weight: 400;
+        font-family: "Lato", sans-serif;
+      }
+      .subTitle {
+        font-weight: 600;
+        font-size: 40px;
+        margin: 50px 0 25px 0;
+      }
+      .desc {
+        font-weight: 400;
+        font-size: 22px;
+      }
+    }
+  }
+  .pagination {
+    button {
+      position: absolute;
+      z-index: 1;
+      top: 46%;
+    }
+    .prev {
+      left: 1%;
+    }
+    .next {
+      right: 1%;
+    }
+    .material-icons {
+      font-size: 35px;
+    }
+  }
+}

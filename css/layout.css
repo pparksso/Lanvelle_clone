@@ -5,6 +5,8 @@ body {
   font-family: "Lato", sans-serif;
   font-family: "Noto Sans KR", sans-serif;
   font-family: "Noto Serif KR", serif;
+  overflow-x: hidden;
+  font-size: 16px;
 }
 
 a {
@@ -16,6 +18,7 @@ button {
   background: none;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .container {
@@ -28,6 +31,7 @@ button {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 99;
 }
 
 #headerLabel {
@@ -60,7 +64,6 @@ button {
   font-weight: 100;
 }
 #headerLabel .close .closeBtn {
-  cursor: pointer;
   margin-right: 20px;
 }
 
@@ -68,6 +71,9 @@ button {
   height: 110px;
   background-color: transparent;
   position: relative;
+}
+#header.on {
+  background-color: #fff;
 }
 #header .container {
   height: 100%;

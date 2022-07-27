@@ -8,6 +8,8 @@ body {
   font-family: "Lato", sans-serif;
   font-family: "Noto Sans KR", sans-serif;
   font-family: "Noto Serif KR", serif;
+  overflow-x: hidden;
+  font-size: 16px;
 }
 a {
   color: inherit;
@@ -17,6 +19,7 @@ button {
   background: none;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .container {
   width: 70vw;
@@ -28,6 +31,7 @@ button {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 99;
 }
 #headerLabel {
   display: flex;
@@ -59,7 +63,6 @@ button {
   }
   .close {
     .closeBtn {
-      cursor: pointer;
       margin-right: 20px;
     }
   }
@@ -68,6 +71,9 @@ button {
   height: 110px;
   background-color: transparent;
   position: relative;
+  &.on {
+    background-color: #fff;
+  }
   .container {
     height: 100%;
     .loginMenu {

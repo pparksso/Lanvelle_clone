@@ -1,0 +1,48 @@
+{
+  "imgPath": "images/main/",
+  "timer": false,
+  "items": [
+    {
+      "img": "newBest1.png",
+      "title": "내츄럴 딥 클렌징워터 500ml",
+      "desc": "국내산 귀리 추출물과 효소 워터 함유",
+      "originalPrice": 35000,
+      "salePrice": 28000
+    },
+    {
+      "img": "newBest2.png",
+      "title": "[랑벨x차현승]랑바이오 블랙 시카 크림 50ml",
+      "desc": "여드름성 피부사용적합 테스트 완료",
+      "originalPrice": 39000,
+      "salePrice": 27300
+    },
+    {
+      "img": "newBest3.png",
+      "title": "랑벨 스타터 B 키트 (클렌저, 블랙시카크림, 블랙시카패드 미니어처)",
+      "desc": "랑벨의 인기제품을 한 번에 사용할 수 있는 기회!",
+      "originalPrice": 0,
+      "salePrice": 16000
+    },
+    {
+      "img": "newBest4.png",
+      "title": "랑벨 스타터 A 키트 (클렌징오일, 토너, 클렌저, 블랙시카크림, 블랙시카패드 미니어처)",
+      "desc": "랑벨의 인기제품을 한 번에 사용할 수 있는 기회!",
+      "originalPrice": 0,
+      "salePrice": 22000
+    },
+    {
+      "img": "newBest5.png",
+      "title": "랑바이오 블랙 시카 앰플 50ml",
+      "desc": "열/화학적/물리적으로 자극받은 피부를 3분 만에 진정",
+      "originalPrice": 0,
+      "salePrice": 38000
+    },
+    {
+      "img": "newBest6.png",
+      "title": "내츄럴 딥 립앤아이 리무버 210ml",
+      "desc": "영국 인체 안자극 테스트 완료",
+      "originalPrice": 28000,
+      "salePrice": 22000
+    }
+  ]
+}

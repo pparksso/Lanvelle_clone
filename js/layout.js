@@ -39,3 +39,12 @@ newBest.addEventListener("mouseleave", function () {
 headerLabelCloseBtn.addEventListener("click", () => {
   headerLabel.classList.add("off");
 });
+
+window.addEventListener("scroll", () => {
+  let scrollTop = window.scrollY;
+  if (scrollTop > 0) {
+    header.classList.add("on");
+  } else {
+    header.classList.remove("on");
+  }
+});

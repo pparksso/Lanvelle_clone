@@ -17,7 +17,9 @@ depth01s.forEach((item, index) => {
       }
       item03.addEventListener("mouseleave", () => {
         item03.classList.remove("on");
-        item.classList.remove("off");
+        depth01Arr.forEach((item02) => {
+          item02.classList.remove("off");
+        });
       });
     });
   });

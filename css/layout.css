@@ -21,6 +21,15 @@ button {
   cursor: pointer;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+  word-break: keep-all;
+}
+
 .container {
   width: 70vw;
   margin: 0 auto;
@@ -41,6 +50,14 @@ button {
   background-color: #16501d;
   align-items: center;
   color: #fff;
+  transition: all 0.4s ease;
+}
+#headerLabel.off {
+  height: 0;
+}
+#headerLabel.off .container,
+#headerLabel.off .close {
+  display: none;
 }
 #headerLabel .container a {
   text-align: center;

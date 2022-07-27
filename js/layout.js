@@ -1,6 +1,8 @@
 const depth01s = document.querySelectorAll("#gnb .depth01");
 const depth02Wrap = document.querySelectorAll("#gnb .depth02Wrap");
 const header = document.querySelector("#header");
+const headerLabel = document.querySelector("#headerLabel");
+const headerLabelCloseBtn = document.querySelector("#headerLabel .closeBtn");
 const depth01Arr = [...depth01s];
 const newBest = depth01s[2];
 
@@ -32,4 +34,8 @@ newBest.addEventListener("mouseleave", function () {
     item.classList.remove("off");
   });
   header.classList.remove("on");
+});
+
+headerLabelCloseBtn.addEventListener("click", () => {
+  headerLabel.classList.add("off");
 });

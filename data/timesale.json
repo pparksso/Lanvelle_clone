@@ -1,0 +1,12 @@
+{
+  "imgPath": "images/main/",
+  "items": [
+    {
+      "img": "timesale01.png",
+      "title": "비타 에너지 잡티 앰플 패드 65매",
+      "desc": "단 1회 사용으로 투명하게 밝아지는 광채패드",
+      "originalPrice": 27000,
+      "salePrice": 10000
+    }
+  ]
+}

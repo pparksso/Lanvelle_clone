@@ -244,3 +244,33 @@
 #bestProduct .container .bestProductList .item .add .right .purchaseBox {
   justify-content: left;
 }
+
+#instagram {
+  position: relative;
+  margin-top: 65px;
+}
+#instagram .titleBox {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 38px;
+  font-family: "Cormorant", serif;
+}
+#instagram .titleBox h1 {
+  display: inline;
+}
+#instagram li {
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}
+#instagram li:hover {
+  opacity: 0.6;
+}
+#instagram .hashtagBox {
+  position: absolute;
+  bottom: -13%;
+  z-index: 1;
+  font-size: 100px;
+  color: #dee2e6;
+  font-family: "Cormorant", serif;
+  white-space: nowrap;
+}

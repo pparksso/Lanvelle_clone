@@ -8,6 +8,7 @@ const saleImgBox = document.querySelector("#timesale .saleImgBox");
 const timerArea = document.querySelector("#timesale .timer");
 const saleTxtBox = document.querySelector("#timesale .txtBox");
 const salePriceBox = document.querySelector("#timesale .priceBox");
+const hashTag = document.querySelector("#instagram .hashtag");
 const tabsArr = [...tabs];
 
 const mainSwiper = new Swiper("#mainVisual", {
@@ -230,6 +231,12 @@ const contentsMaker = (title, area) => {
       console.log(err);
     });
 };
+
+const instaSwiper = new Swiper(".instagramWrap", {
+  centerInsufficientSlides: true,
+  slidesPerView: 5,
+  // spaceBetween: 40,
+});
 
 setInterval(timerMaker, 1000);
 contentsMaker("newBest", newBestArea);

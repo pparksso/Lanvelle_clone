@@ -270,3 +270,33 @@
     }
   }
 }
+
+#instagram {
+  position: relative;
+  margin-top: 65px;
+  .titleBox {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 38px;
+    font-family: "Cormorant", serif;
+    h1 {
+      display: inline;
+    }
+  }
+  li {
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  .hashtagBox {
+    position: absolute;
+    bottom: -13%;
+    z-index: 1;
+    font-size: 100px;
+    color: #dee2e6;
+    font-family: "Cormorant", serif;
+    white-space: nowrap;
+  }
+}

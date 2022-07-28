@@ -3,6 +3,7 @@ const depth02Wrap = document.querySelectorAll("#gnb .depth02Wrap");
 const header = document.querySelector("#header");
 const headerLabel = document.querySelector("#headerLabel");
 const headerLabelCloseBtn = document.querySelector("#headerLabel .closeBtn");
+const video = document.querySelector("#bestProduct .videoBox iframe");
 const depth01Arr = [...depth01s];
 const newBest = depth01s[2];
 
@@ -38,6 +39,7 @@ newBest.addEventListener("mouseleave", function () {
 
 headerLabelCloseBtn.addEventListener("click", () => {
   headerLabel.classList.add("off");
+  video.classList.add("on");
 });
 
 window.addEventListener("scroll", () => {

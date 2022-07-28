@@ -216,6 +216,13 @@
   display: flex;
   justify-content: space-between;
 }
+#bestProduct .container .videoBox iframe {
+  position: sticky;
+  top: 150px;
+}
+#bestProduct .container .videoBox iframe.on {
+  top: 110px;
+}
 #bestProduct .container .bestProductList .titleBox {
   padding-bottom: 42px;
   font-size: 46px;

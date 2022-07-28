@@ -1,3 +1,84 @@
+.item {
+  .txtBox {
+    .title {
+      font-weight: 600;
+      font-size: 21px;
+    }
+    .desc {
+      margin-top: 12px;
+      font-family: "Noto Sans KR", sans-serif;
+      font-weight: 350;
+      font-size: 14px;
+      color: #868e96;
+    }
+  }
+  .priceBox {
+    margin-top: 16px;
+    .percent {
+      font-family: "Cormorant", serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #16501d;
+      margin-right: 5px;
+      strong {
+        font-family: "Lato", sans-serif;
+      }
+    }
+    .originalPrice {
+      font-family: "Lato", sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: #c8c8c8;
+      text-decoration: line-through;
+      margin-right: 5px;
+    }
+    .salePrice {
+      font-family: "Noto Sans KR", sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      color: #2e2e2e;
+      margin-left: 8px;
+      strong {
+        font-family: "Lato", sans-serif;
+        font-weight: 600;
+        font-size: 21px;
+      }
+    }
+  }
+  .purchaseBox {
+    visibility: hidden;
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    ul {
+      display: flex;
+      li {
+        button {
+          padding: 0;
+        }
+      }
+    }
+    .card {
+      width: 140px;
+      height: 44px;
+      margin-left: 15px;
+      background-color: #16501d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .material-icons {
+        font-size: 20px;
+      }
+      span {
+        color: #fff;
+        font-weight: 400;
+        font-size: 14px;
+        display: block;
+      }
+    }
+  }
+}
+
 #mainVisual {
   position: relative;
   ul li a {
@@ -108,84 +189,6 @@
       color: #16501d;
       margin-bottom: 30px;
     }
-    .txtBox {
-      .title {
-        font-weight: 600;
-        font-size: 21px;
-      }
-      .desc {
-        margin-top: 12px;
-        font-family: "Noto Sans KR", sans-serif;
-        font-weight: 350;
-        font-size: 14px;
-        color: #868e96;
-      }
-    }
-    .priceBox {
-      margin-top: 16px;
-      .percent {
-        font-family: "Cormorant", serif;
-        font-size: 14px;
-        font-weight: 600;
-        color: #16501d;
-        margin-right: 5px;
-        strong {
-          font-family: "Lato", sans-serif;
-        }
-      }
-      .originalPrice {
-        font-family: "Lato", sans-serif;
-        font-weight: 600;
-        font-size: 16px;
-        color: #c8c8c8;
-        text-decoration: line-through;
-        margin-right: 5px;
-      }
-      .salePrice {
-        font-family: "Noto Sans KR", sans-serif;
-        font-weight: 400;
-        font-size: 15px;
-        color: #2e2e2e;
-        margin-left: 8px;
-        strong {
-          font-family: "Lato", sans-serif;
-          font-weight: 600;
-          font-size: 21px;
-        }
-      }
-    }
-    .purchaseBox {
-      visibility: hidden;
-      margin-top: 22px;
-      display: flex;
-      justify-content: center;
-      ul {
-        display: flex;
-        li {
-          button {
-            padding: 0;
-          }
-        }
-      }
-      .card {
-        width: 140px;
-        height: 44px;
-        margin-left: 15px;
-        background-color: #16501d;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .material-icons {
-          font-size: 20px;
-        }
-        span {
-          color: #fff;
-          font-weight: 400;
-          font-size: 14px;
-          display: block;
-        }
-      }
-    }
     .pagination {
       button {
         position: absolute;
@@ -222,6 +225,41 @@
   #promotion {
     &::before {
       background-image: url("../images/main/promotionBg.png");
+    }
+  }
+}
+
+#bestProduct {
+  padding-top: 245px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .videoBox {
+    }
+    .bestProductList {
+      .titleBox {
+        padding-bottom: 42px;
+        font-size: 46px;
+        font-family: "Cormorant", serif;
+      }
+      .item .add {
+        display: flex;
+        border-top: 1px solid #e9ecef;
+        &:last-child {
+          border-bottom: 1px solid #e9ecef;
+        }
+        &.purchaseOn:hover {
+          .purchaseBox {
+            visibility: visible;
+          }
+        }
+        .right {
+          padding: 30px 0 0 30px;
+          .purchaseBox {
+            justify-content: left;
+          }
+        }
+      }
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "imgPath": "../images/main/",
+  "items": [
+    {
+      "img": "bestProduct01.png",
+      "title": "내츄럴 프레시 업 선크림",
+      "desc": "저자극 유기자차, 선크림 유목민 정착템",
+      "originalPrice": 32000,
+      "salePrice": 19900
+    },
+    {
+      "img": "bestProduct02.png",
+      "title": "내츄럴 딥 클렌징 오일 200ml",
+      "desc": "클렌징오일의 명가, 저자극 천연 오일",
+      "originalPrice": 32000,
+      "salePrice": 19900
+    },
+    {
+      "img": "bestProduct03.png",
+      "title": "비타 에너지 잡티 앰플 50ml",
+      "desc": "초고가 비타민 C에칠 20,00ppm 함유",
+      "originalPrice": 34000,
+      "salePrice": 25200
+    },
+    {
+      "img": "bestProduct04.png",
+      "title": "[랑벨x차현승] 랑바이오 블랙 시카 <br> 퀵 패드 100매",
+      "desc": "3초 쿨링/3분 흡수, 블랙비 프로폴리스/시카 4종",
+      "originalPrice": 33000,
+      "salePrice": 23100
+    }
+  ]
+}

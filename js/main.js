@@ -3,6 +3,7 @@ const pannels = document.querySelectorAll("#contents .pannel");
 const timeSaleArea = document.querySelector("#timesale");
 const newBestArea = document.querySelector("#newBest ul");
 const promotionArea = document.querySelector("#promotion ul");
+const bestProductArea = document.querySelector("#bestProduct ul");
 const saleImgBox = document.querySelector("#timesale .saleImgBox");
 const timerArea = document.querySelector("#timesale .timer");
 const saleTxtBox = document.querySelector("#timesale .txtBox");
@@ -88,7 +89,7 @@ const timeSaleMake = () => {
     });
 };
 
-//newBest, promotion 생성함수
+//newBest, promotion, bestProduct 생성함수
 const contentsMaker = (title, area) => {
   axios
     .get(`../data/${title}.json`)
@@ -109,6 +110,7 @@ const contentsMaker = (title, area) => {
             <img src="${imgPath}${item.img}" alt="${item.title}" />
           </div>
         </a>
+        <div class="right">
         <div class="txtBox">
           <a href="">
             <h1 class="title">${item.title}</h1>
@@ -129,6 +131,7 @@ const contentsMaker = (title, area) => {
           </ul>
           <button class="card"><span class="material-icons"> credit_card </span>&nbsp;<span>바로구매</span></button>
         </div>
+        </div>
       </li>
         `;
         } else {
@@ -139,6 +142,7 @@ const contentsMaker = (title, area) => {
             <img src="${imgPath}${item.img}" alt="${item.title}" />
           </div>
         </a>
+        <div class="right">
         <div class="txtBox">
           <a href="">
             <h1 class="title">${item.title}</h1>
@@ -158,6 +162,7 @@ const contentsMaker = (title, area) => {
             </li>
           </ul>
           <button class="card"><span class="material-icons"> credit_card </span>&nbsp;<span>바로구매</span></button>
+        </div>
         </div>
       </li>
         `;
@@ -230,3 +235,4 @@ setInterval(timerMaker, 1000);
 contentsMaker("newBest", newBestArea);
 contentsMaker("promotion", promotionArea);
 timeSaleMake();
+contentsMaker("bestProduct", bestProductArea);

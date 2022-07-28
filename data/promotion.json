@@ -1,6 +1,5 @@
 {
-  "imgPath": "images/main/",
-  "timer": false,
+  "imgPath": "../images/main/",
   "items": [
     {
       "img": "promotion01.png",

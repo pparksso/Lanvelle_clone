@@ -1,6 +1,6 @@
 {
-  "imgPath": "images/main/",
-  "timer": false,
+  "imgPath": "../images/main/",
+  "swiper": true,
   "items": [
     {
       "img": "newBest1.png",

@@ -93,6 +93,9 @@ span {
 #header.on {
   background-color: #fff;
 }
+#header.scrollDown {
+  background-color: #fff;
+}
 #header .container {
   height: 100%;
 }

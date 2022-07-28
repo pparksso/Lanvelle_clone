@@ -45,8 +45,8 @@ headerLabelCloseBtn.addEventListener("click", () => {
 window.addEventListener("scroll", () => {
   let scrollTop = window.scrollY;
   if (scrollTop > 0) {
-    header.classList.add("on");
+    header.classList.add("scrollDown");
   } else {
-    header.classList.remove("on");
+    header.classList.remove("scrollDown");
   }
 });

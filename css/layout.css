@@ -225,3 +225,87 @@ span {
   top: -30%;
   right: -10%;
 }
+
+#footer {
+  margin-top: 150px;
+  background-color: #2e2e2e;
+}
+#footer .container {
+  padding: 50px 0 60px 0;
+  display: flex;
+  justify-content: space-between;
+}
+#footer .container .fLeft {
+  font-size: 14px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+#footer .container .fLeft #fLogo {
+  margin-bottom: 40px;
+}
+#footer .container .fLeft .lawBox {
+  display: flex;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+#footer .container .fLeft .lawBox li {
+  margin-right: 24px;
+}
+#footer .container .fLeft .infoBox {
+  font-weight: 350;
+  color: #828282;
+}
+#footer .container .fLeft .infoBox p span {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+#footer .container .fLeft .infoBox p span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -10px;
+  display: inline-block;
+  height: 10px;
+  width: 1px;
+  background-color: #c2beb4;
+  margin: 0 7px;
+}
+#footer .container .fLeft .copyright {
+  color: #606060;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+}
+#footer .container .fRight {
+  color: #fff;
+}
+#footer .container .fRight .customer {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+}
+#footer .container .fRight .customer h3 {
+  font-weight: 500;
+}
+#footer .container .fRight .customer li {
+  color: #828282;
+  font-weight: 400;
+}
+#footer .container .fRight .customer li.tel {
+  color: #fff;
+  font-size: 20px;
+}
+#footer .container .fRight .qnaBox {
+  display: flex;
+}
+#footer .container .fRight .qnaBox a {
+  display: inline-block;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  background-color: #232323;
+}
+#footer .container .fRight .qnaBox a:hover {
+  background-color: #000;
+}

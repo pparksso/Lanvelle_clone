@@ -228,3 +228,86 @@ span {
     }
   }
 }
+#footer {
+  margin-top: 150px;
+  background-color: #2e2e2e;
+  .container {
+    padding: 50px 0 60px 0;
+    display: flex;
+    justify-content: space-between;
+    .fLeft {
+      #fLogo {
+        margin-bottom: 40px;
+      }
+      font-size: 14px;
+      font-family: "Noto Sans KR", sans-serif;
+      .lawBox {
+        display: flex;
+        color: #fff;
+        font-weight: 500;
+        margin-bottom: 18px;
+        li {
+          margin-right: 24px;
+        }
+      }
+      .infoBox {
+        font-weight: 350;
+        color: #828282;
+        p span {
+          display: inline-block;
+          position: relative;
+          vertical-align: top;
+          &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -10px;
+            display: inline-block;
+            height: 10px;
+            width: 1px;
+            background-color: #c2beb4;
+            margin: 0 7px;
+          }
+        }
+      }
+      .copyright {
+        color: #606060;
+        font-size: 12px;
+        font-weight: 400;
+        font-family: "Lato", sans-serif;
+      }
+    }
+    .fRight {
+      color: #fff;
+      .customer {
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 14px;
+        h3 {
+          font-weight: 500;
+        }
+        li {
+          color: #828282;
+          font-weight: 400;
+          &.tel {
+            color: #fff;
+            font-size: 20px;
+          }
+        }
+      }
+      .qnaBox {
+        display: flex;
+        a {
+          display: inline-block;
+          padding: 10px;
+          font-weight: 400;
+          font-size: 12px;
+          background-color: #232323;
+          &:hover {
+            background-color: #000;
+          }
+        }
+      }
+    }
+  }
+}

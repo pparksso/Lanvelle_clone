@@ -22,6 +22,12 @@ const mainSwiper = new Swiper("#mainVisual", {
     delay: 8000,
   },
 });
+const instaSwiper = new Swiper(".instagramWrap", {
+  centeredSlides: true,
+  centerInsufficientSlides: true,
+  slidesPerView: 4.5,
+});
+instaSwiper.translateTo(-100);
 //컨텐츠 탭판넬
 tabs.forEach((item, idx) => {
   item.addEventListener("click", () => {
@@ -231,12 +237,6 @@ const contentsMaker = (title, area) => {
       console.log(err);
     });
 };
-
-const instaSwiper = new Swiper(".instagramWrap", {
-  centerInsufficientSlides: true,
-  slidesPerView: 4.5,
-  // spaceBetween: 40,
-});
 
 setInterval(timerMaker, 1000);
 contentsMaker("newBest", newBestArea);

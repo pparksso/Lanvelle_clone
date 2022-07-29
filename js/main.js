@@ -234,7 +234,7 @@ const contentsMaker = (title, area) => {
 
 const instaSwiper = new Swiper(".instagramWrap", {
   centerInsufficientSlides: true,
-  slidesPerView: 5,
+  slidesPerView: 4.5,
   // spaceBetween: 40,
 });
 

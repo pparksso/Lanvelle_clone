@@ -291,12 +291,30 @@
     }
   }
   .hashtagBox {
-    position: absolute;
-    bottom: -13%;
-    z-index: 1;
-    font-size: 100px;
-    color: #dee2e6;
-    font-family: "Cormorant", serif;
-    white-space: nowrap;
+    position: relative;
+    div {
+      overflow: hidden;
+      display: block;
+      width: 200%;
+      position: absolute;
+      bottom: -50px;
+      z-index: 1;
+      white-space: nowrap;
+      animation: txtAni 12s linear infinite;
+      span {
+        font-size: 100px;
+        color: #dee2e6;
+        font-family: "Cormorant", serif;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+@keyframes txtAni {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
   }
 }

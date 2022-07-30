@@ -48,20 +48,26 @@ tabs.forEach((item, idx) => {
 //타임세일구역 타이머생성함수
 function timerMaker() {
   const today = new Date();
+  const tomorrowKeep = new Date();
   const todaySec = Math.trunc(today.getTime() / 1000);
-  const tomorrow = new Date(today.setDate(today.getDate() + 1));
-  const outTime = new Date(tomorrow.getFullYear(), tomorrow.getMonth(), tomorrow.getDate(), 13, 0, 0);
-  const outTimeSec = Math.trunc(outTime.getTime() / 1000);
-  const leftTime = outTimeSec - todaySec;
-  const hour = Math.floor(leftTime / (60 * 60));
-  const min = Math.floor((leftTime % (60 * 60)) / 60);
-  const sec = Math.floor((leftTime % (60 * 60)) % 60);
-  const hours = hour < 10 ? `0${hour}` : hour;
-  const minutes = min < 10 ? `0${min}` : min;
-  const seconds = sec < 10 ? `0${sec}` : sec;
-  // console.log(hours + ":" + minutes + ":" + seconds);
-  let tempHtml = `<span>${hours}</span> : <span>${minutes}</span> : <span>${seconds}</span>`;
-  timerArea.innerHTML = tempHtml;
+  const tomorrow = new Date(tomorrowKeep.setDate(tomorrowKeep.getDate() + 1));
+  let outTime = new Date(tomorrow.getFullYear(), tomorrow.getMonth(), tomorrow.getDate(), 13, 0, 0);
+  let outTimeSec = Math.trunc(outTime.getTime() / 1000);
+  // 타임아웃시간 설정 함수
+  const timeChange = (day) => {
+    outTime = new Date(day.getFullYear(), day.getMonth(), day.getDate(), 13, 0, 0);
+    outTimeSec = Math.trunc(outTime.getTime() / 1000);
+    const leftTime = outTimeSec - todaySec;
+    const hour = Math.floor(leftTime / (60 * 60));
+    const min = Math.floor((leftTime % (60 * 60)) / 60);
+    const sec = Math.floor((leftTime % (60 * 60)) % 60);
+    const hours = hour < 10 ? `0${hour}` : hour;
+    const minutes = min < 10 ? `0${min}` : min;
+    const seconds = sec < 10 ? `0${sec}` : sec;
+    let tempHtml = `<span>${hours}</span> : <span>${minutes}</span> : <span>${seconds}</span>`;
+    timerArea.innerHTML = tempHtml;
+  };
+  outTimeSec - todaySec >= 86400 ? timeChange(today) : timeChange(tomorrow);
 }
 
 //타임세일

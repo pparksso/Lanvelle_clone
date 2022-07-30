@@ -1,9 +1,12 @@
+const body = document.querySelector("body");
 const depth01s = document.querySelectorAll("#gnb .depth01");
 const depth02Wrap = document.querySelectorAll("#gnb .depth02Wrap");
 const header = document.querySelector("#header");
 const headerLabel = document.querySelector("#headerLabel");
 const headerLabelCloseBtn = document.querySelector("#headerLabel .closeBtn");
 const video = document.querySelector("#bestProduct .videoBox iframe");
+const scrollTopBtnList = document.querySelector("#scrollTop");
+const scrollTopBtn = document.querySelector("#scrollTop .top");
 const depth01Arr = [...depth01s];
 const newBest = depth01s[2];
 
@@ -46,7 +49,17 @@ window.addEventListener("scroll", () => {
   let scrollTop = window.scrollY;
   if (scrollTop > 0) {
     header.classList.add("scrollDown");
+    scrollTopBtnList.classList.add("on");
   } else {
     header.classList.remove("scrollDown");
+    scrollTopBtnList.classList.remove("on");
   }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scroll({
+    behavior: "smooth",
+    left: 0,
+    top: body.offsetTop,
+  });
 });

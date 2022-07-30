@@ -24,13 +24,13 @@
     <!-- local css -->
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/layout.min.css" />
-    <link rel="stylesheet" href="../css/main.min.css" />
+    <link rel="stylesheet" href="../css/sub.min.css" />
 
     <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../js/swiper-bundle.min.js"></script>
     <script src="../js/layout.js" defer></script>
-    <script src="../js/main.js" defer></script>
+    <script src="../js/sub.js" defer></script>
   </head>
   <body>
     <header class="headerWrap">
@@ -232,143 +232,101 @@
       </div>
     </header>
     <!-- header end -->
-    <section id="mainVisual">
-      <ul class="swiper-wrapper">
-        <li class="swiper-slide">
-          <a href="">
-            <div class="imgBox"><img src="../images/main/mainVisual02.png" alt="" /></div>
-            <div class="txtBox">
-              <p class="title">PROMOTION</p>
-              <h1 class="subTitle">만원의 행복</h1>
-              <h2 class="desc">오늘의 행복은 뭘까요?</h2>
-            </div>
-          </a>
-        </li>
-        <li class="swiper-slide">
-          <a href="">
-            <div class="imgBox"><img src="../images/main/mainVisual01.png" alt="" /></div>
-            <div class="txtBox white">
-              <p class="title">SUMMER PROMOTION</p>
-              <h1 class="subTitle">나만없어, 바캉스 필수템!</h1>
-              <h2 class="desc">여름한정 특별가로 할인받자</h2>
-            </div>
-          </a>
-        </li>
-      </ul>
-      <div class="pagination">
-        <button class="prev"><span class="material-icons"> arrow_back_ios_new </span></button>
-        <button class="next"><span class="material-icons"> arrow_forward_ios </span></button>
-      </div>
-    </section>
-    <!-- mainVisuasl end -->
-    <section id="contents">
-      <div class="tabs">
-        <ul>
-          <li><span>Time Sale</span></li>
-          <li class="on"><span>New&Best</span></li>
-          <li><span>Promotion</span></li>
-        </ul>
-      </div>
-      <div class="pannel" id="timesale">
-        <div class="item purchaseOn">
-          <a href="" class="saleImgBox"> </a>
-          <div class="timer">
-            <!-- script -->
-          </div>
-          <div class="txtBox">
-            <!-- script -->
-          </div>
-          <div class="priceBox">
-            <!-- script -->
-          </div>
-          <div class="purchaseBox">
-            <ul>
-              <li>
-                <button><img src="../images/main/heat_btn.png" alt="찜하기" /></button>
-              </li>
-              <li>
-                <button><img src="../images/main/cart_btn.png" alt="장바구니에 넣기" /></button>
-              </li>
-            </ul>
-            <button class="card"><span class="material-icons"> credit_card </span>&nbsp;<span>바로구매</span></button>
-          </div>
-        </div>
-      </div>
-      <div class="pannel on" id="newBest">
-        <ul class="item swiper-wrapper list">
-          <!-- script -->
-        </ul>
-        <div class="pagination">
-          <button class="prev"><span class="material-icons"> arrow_back_ios_new </span></button>
-          <button class="next"><span class="material-icons"> arrow_forward_ios </span></button>
-        </div>
-      </div>
-      <div class="pannel" id="promotion">
-        <ul class="item promotionList">
-          <!-- script -->
-        </ul>
-      </div>
-    </section>
-    <!-- contents end -->
-    <section id="bestProduct">
-      <div class="container">
-        <div class="videoBox">
-          <iframe
-            width="700"
-            height="394"
-            src="https://www.youtube.com/embed/Wzg-d8qBzno?autoplay=1&mute=1"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="bestProductList">
-          <div class="titleBox"><h1>Best Products</h1></div>
-          <ul class="item"></ul>
-          <!-- script -->
+    <section id="all">
+      <div class="title">
+        <div class="container">
+          <h1>Shop</h1>
+          <ul class="tabList">
+            <li>
+              <a href="" class="subDepth01 on"><span>전 제품보기</span></a>
+              <ul class="subTab on">
+                <li>
+                  <a href="" class="subTabItem"><span>ALL</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>프로모션</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="" class="subDepth01"><span>품목별</span></a>
+              <ul class="subTab">
+                <li>
+                  <a href="" class="subTabItem"><span>기획세트</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>클렌징</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>토너/패드</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>앰플/세럼</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>오일</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>크림</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>선크림</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>뷰티 소품</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="" class="subDepth01"><span>라인별</span></a>
+              <ul class="subTab">
+                <li>
+                  <a href="" class="subTabItem"><span>내츄럴 딥</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>내츄럴 프레시</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>랑바이오</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>비타 에너지</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>수퍼내츄럴</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>울트라리프팅</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="" class="subDepth01"><span>기능별</span></a>
+              <ul class="subTab">
+                <li>
+                  <a href="" class="subTabItem"><span>수분/보습</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>진정/쿨링</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>탄력/주름개선</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>화이트닝</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>모공/각질</span></a>
+                </li>
+                <li>
+                  <a href="" class="subTabItem"><span>자외선 차단</span></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
-    <!-- bestProduct end -->
-    <section id="instagram">
-      <div class="titleBox">
-        <img src="../images/main/instagram.png" alt="인스타그램" />
-        <h1>instagram</h1>
-      </div>
-      <div class="instagramWrap">
-        <ul class="swiper-wrapper">
-          <li class="swiper-slide">
-            <a href=""><img src="../images/main/insta01.jpg" alt="인스타그램" /></a>
-          </li>
-          <li class="swiper-slide">
-            <a href=""><img src="../images/main/insta02.jpg" alt="인스타그램" /></a>
-          </li>
-          <li class="swiper-slide">
-            <a href=""><img src="../images/main/insta03.jpg" alt="인스타그램" /></a>
-          </li>
-          <li class="swiper-slide">
-            <a href=""><img src="../images/main/insta04.jpg" alt="인스타그램" /></a>
-          </li>
-          <li class="swiper-slide">
-            <a href=""><img src="../images/main/insta05.jpg" alt="인스타그램" /></a>
-          </li>
-          <li class="swiper-slide">
-            <a href=""><img src="../images/main/insta06.jpg" alt="인스타그램" /></a>
-          </li>
-        </ul>
-        <div class="hashtagBox">
-          <div class="">
-            <span> #LANBELLE #SIMPLE PERFECTION </span>
-            <span> #LANBELLE #SIMPLE PERFECTION </span>
-            <span> #LANBELLE #SIMPLE PERFECTION </span>
-            <span> #LANBELLE #SIMPLE PERFECTION </span>
-            <span> #LANBELLE #SIMPLE PERFECTION </span>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- instagram end -->
     <footer id="footer">
       <div class="container">
         <div class="fLeft">

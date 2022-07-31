@@ -1,11 +1,12 @@
 #all {
   padding-top: 190px;
-  .title {
+  .titleBox {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-bottom: 100px;
     .container {
       h1 {
         font-size: 52px;
@@ -55,5 +56,151 @@
         }
       }
     }
+  }
+}
+#shopList .container {
+  margin-bottom: 200px;
+  .listTop {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    &::before {
+      content: "";
+      width: 100%;
+      display: block;
+      height: 1px;
+      background-color: #eee;
+      position: absolute;
+      top: -20px;
+      left: 0;
+    }
+    .itemNum {
+      p {
+        font-size: 14px;
+        color: #2b2b2b;
+        font-weight: 400;
+        font-family: "Noto Sans KR", sans-serif;
+        span {
+          font-weight: 600;
+          color: #16501d;
+          font-family: "Lato", sans-serif;
+        }
+      }
+    }
+    .pickListBox .pickList {
+      position: absolute;
+      top: 0;
+      right: 0;
+      .pickDepth01 {
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 14px;
+        color: #2b2b2b;
+        .pick {
+          display: flex;
+          padding: 10px 15px;
+          font-weight: 500;
+          &::after {
+            content: "\e5cf";
+            font-family: "Material Icons";
+            color: #aaa;
+            display: inline-block;
+            margin-left: 10px;
+            transition: all 0.2s ease-in-out;
+          }
+        }
+        .pickDepth02 {
+          display: none;
+          padding: 10px 0;
+          background-color: #f8f9fa;
+          li {
+            a {
+              display: block;
+              font-weight: 400;
+              padding: 10px 15px;
+            }
+          }
+        }
+      }
+      &.on {
+        .pick {
+          background-color: #f8f9fa;
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+        .pickDepth02 {
+          display: block;
+        }
+      }
+    }
+  }
+  .itemPannel {
+    .itemList {
+      display: flex;
+      flex-wrap: wrap;
+      .el {
+        width: 33.33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+        &.purchaseOn:hover {
+          .purchaseBox {
+            visibility: visible;
+          }
+        }
+        &:hover {
+          animation: filterAni 0.2s ease-in-out;
+        }
+      }
+    }
+    .noItem {
+      display: none;
+      width: 100%;
+      justify-content: center;
+      p {
+        font-family: "Noto Serif KR", serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #333;
+      }
+      &.on {
+        display: flex;
+      }
+    }
+  }
+}
+#pageWrap .container {
+  ul {
+    display: flex;
+    justify-content: center;
+    li {
+      &:not(:nth-child(3)) {
+        margin-right: 3px;
+      }
+      a {
+        padding: 6px 12px;
+        border-radius: 100%;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        color: #ababab;
+        &.on {
+          background-color: #16501d;
+          font-weight: 700;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+@keyframes filterAni {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.9;
   }
 }

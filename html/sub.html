@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/layout.min.css" />
     <link rel="stylesheet" href="../css/sub.min.css" />
+    <link rel="stylesheet" href="../css/main.min.css">
 
     <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -233,7 +234,7 @@
     </header>
     <!-- header end -->
     <section id="all">
-      <div class="title">
+      <div class="titleBox">
         <div class="container">
           <h1>Shop</h1>
           <ul class="tabList">
@@ -244,7 +245,7 @@
                   <a href="" class="subTabItem"><span>ALL</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>프로모션</span></a>
+                  <a href="" class="subTabItem" data-type="promotion"><span>프로모션</span></a>
                 </li>
               </ul>
             </li>
@@ -252,28 +253,28 @@
               <a href="" class="subDepth01"><span>품목별</span></a>
               <ul class="subTab">
                 <li>
-                  <a href="" class="subTabItem"><span>기획세트</span></a>
+                  <a href="" class="subTabItem" data-type="byItem"><span>기획세트</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>클렌징</span></a>
+                  <a href="" class="subTabItem" data-type="byItem"><span>클렌징</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>토너/패드</span></a>
+                  <a href="" class="subTabItem" data-type="byItem"><span>토너/패드</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>앰플/세럼</span></a>
+                  <a href="" class="subTabItem" data-type="byItem"><span>앰플/세럼</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>오일</span></a>
+                  <a href="" class="subTabItem" data-type="byItem"><span>오일</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>크림</span></a>
+                  <a href="" class="subTabItem" data-type="byItem"><span>크림</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>선크림</span></a>
+                  <a href="" class="subTabItem" data-type="byItem"><span>선크림</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>뷰티 소품</span></a>
+                  <a href="" class="subTabItem" data-type="byItem"><span>뷰티 소품</span></a>
                 </li>
               </ul>
             </li>
@@ -281,22 +282,22 @@
               <a href="" class="subDepth01"><span>라인별</span></a>
               <ul class="subTab">
                 <li>
-                  <a href="" class="subTabItem"><span>내츄럴 딥</span></a>
+                  <a href="" class="subTabItem" data-type="byLine"><span>내츄럴 딥</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>내츄럴 프레시</span></a>
+                  <a href="" class="subTabItem" data-type="byLine"><span>내츄럴 프레시</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>랑바이오</span></a>
+                  <a href="" class="subTabItem" data-type="byLine"><span>랑바이오</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>비타 에너지</span></a>
+                  <a href="" class="subTabItem" data-type="byLine"><span>비타 에너지</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>수퍼내츄럴</span></a>
+                  <a href="" class="subTabItem" data-type="byLine"><span>수퍼내츄럴</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>울트라리프팅</span></a>
+                  <a href="" class="subTabItem" data-type="byLine"><span>울트라리프팅</span></a>
                 </li>
               </ul>
             </li>
@@ -304,27 +305,67 @@
               <a href="" class="subDepth01"><span>기능별</span></a>
               <ul class="subTab">
                 <li>
-                  <a href="" class="subTabItem"><span>수분/보습</span></a>
+                  <a href="" class="subTabItem" data-type="byFunction"><span>수분/보습</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>진정/쿨링</span></a>
+                  <a href="" class="subTabItem" data-type="byFunction"><span>진정/쿨링</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>탄력/주름개선</span></a>
+                  <a href="" class="subTabItem" data-type="byFunction"><span>탄력/주름개선</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>화이트닝</span></a>
+                  <a href="" class="subTabItem" data-type="byFunction"><span>화이트닝</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>모공/각질</span></a>
+                  <a href="" class="subTabItem" data-type="byFunction"><span>모공/각질</span></a>
                 </li>
                 <li>
-                  <a href="" class="subTabItem"><span>자외선 차단</span></a>
+                  <a href="" class="subTabItem" data-type="byFunction"><span>자외선 차단</span></a>
                 </li>
               </ul>
             </li>
           </ul>
         </div>
+      </div>
+      <div id="shopList">
+        <div class="container">
+          <div class="listTop">
+            <div class="itemNum">
+              <p><span class="countNum"></span> 개의 상품</p>
+            </div>
+            <div class="pickListBox">
+              <ul class="pickList">
+                <li class="pickDepth01">
+                  <a href="" class="pick">추천순</a>
+                  <ul class="pickDepth02">
+                    <li><a href="" data-sort="추천순">추천순</a></li>
+                    <li><a href="" data-sort="인기순">인기순</a></li>
+                    <li><a href="" data-sort="가격낮은순">가격낮은순</a></li>
+                    <li><a href="" data-sort="가격높은순">가격높은순</a></li>
+                    <li><a href="" data-sort="상품평순">상품평순</a></li>
+                    <li><a href="" data-sort="등록일순">등록일순</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="itemPannel">
+            <ul class="itemList item">
+              <!-- script -->
+            </ul>
+            <div class="noItem">
+              <p>상품이 존재하지 않습니다</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="pageWrap">
+        <div class="container">
+          <ul class="pageNum">
+            <!-- script -->
+          </ul>
+        </div>
+      </div>
       </div>
     </section>
     <footer id="footer">

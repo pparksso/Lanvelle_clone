@@ -11,9 +11,7 @@
       "review": 16,
       "registration": 25,
       "promotion": true,
-      "byItem": [2],
-      "byLine": [2],
-      "byFunction": [1]
+      "pickIndex": [4, 12, 17]
     },
     {
       "img": "랑바이오블랙시카크림50.png",
@@ -25,9 +23,7 @@
       "review": 12,
       "registration": 24,
       "promotion": true,
-      "byItem": [5],
-      "byLine": [2],
-      "byFunction": [1]
+      "pickIndex": [7, 12, 17]
     },
     {
       "img": "랑바이오오일30.png",
@@ -39,9 +35,7 @@
       "review": 9,
       "registration": 23,
       "promotion": false,
-      "byItem": [4],
-      "byLine": [2],
-      "byFunction": [1]
+      "pickIndex": [6, 12, 17]
     },
     {
       "img": "내츄럴프레시업선크림.png",
@@ -53,12 +47,10 @@
       "review": 10,
       "registration": 14,
       "promotion": true,
-      "byItem": [6],
-      "byLine": [1],
-      "byFunction": [5]
+      "pickIndex": [8, 11, 21]
     },
     {
-      "img": "내츄럴딥클렌징오일200",
+      "img": "내츄럴딥클렌징오일200.png",
       "title": "내츄럴 딥 클렌징 오일 200ml",
       "desc": "클렌징오일의 명가, 저자극 천연 오일",
       "originalPrice": 32000,
@@ -67,12 +59,10 @@
       "review": 11,
       "registration": 16,
       "promotion": false,
-      "byItem": [1],
-      "byLine": [0],
-      "byFunction": [4]
+      "pickIndex": [3, 10, 20]
     },
     {
-      "img": "내츄럴딥포어클렌저210",
+      "img": "내츄럴딥포어클렌저210.png",
       "title": "내츄럴 딥 포어 클렌저 210ml",
       "desc": "속당김 없이 촉촉하게, 모공 속까지 깔끔하게",
       "originalPrice": 31000,
@@ -81,12 +71,10 @@
       "review": 8,
       "registration": 15,
       "promotion": false,
-      "byItem": [1],
-      "byLine": [0],
-      "byFunction": [4]
+      "pickIndex": [3, 10, 20]
     },
     {
-      "img": "내츄럴딥클렌징워터500",
+      "img": "내츄럴딥클렌징워터500.png",
       "title": "내츄럴 딥 클렌징워터 500ml",
       "desc": "국내산 귀리 추출물과 효소 워터 함유",
       "originalPrice": 35000,
@@ -95,12 +83,10 @@
       "review": 2,
       "registration": 7,
       "promotion": false,
-      "byItem": [1],
-      "byLine": [0],
-      "byFunction": [4]
+      "pickIndex": [3, 10, 20]
     },
     {
-      "img": "내츄럴딥립앤아이리무버210",
+      "img": "내츄럴딥립앤아이리무버210.png",
       "title": "내츄럴 딥 립앤아이 리무버 210ml",
       "desc": "영국 인체 안자극 테스트 완료",
       "originalPrice": 28000,
@@ -109,12 +95,10 @@
       "review": 1,
       "registration": 6,
       "promotion": false,
-      "byItem": [1],
-      "byLine": [0],
-      "byFunction": [0]
+      "pickIndex": [3, 10, 16]
     },
     {
-      "img": "울트라리프팅세럼50",
+      "img": "울트라리프팅세럼50.png",
       "title": "울트라 리프팅 세럼 50ml",
       "desc": "탄력에 탄력을 더하다! 깊은피부탄력 세럼",
       "originalPrice": 70000,
@@ -123,12 +107,10 @@
       "review": 5,
       "registration": 22,
       "promotion": false,
-      "byItem": [3],
-      "byLine": [5],
-      "byFunction": [2]
+      "pickIndex": [5, 15, 18]
     },
     {
-      "img": "울트라리프팅크림",
+      "img": "울트라리프팅크림55.png",
       "title": "울트라 리프팅 크림 55g",
       "desc": "탄력에 탄력을 더하다! 탄력부스터 크림",
       "originalPrice": 72000,
@@ -137,12 +119,10 @@
       "review": 7,
       "registration": 21,
       "promotion": false,
-      "byItem": [5],
-      "byLine": [5],
-      "byFunction": [2]
+      "pickIndex": [7, 15, 18]
     },
     {
-      "img": "울트라리프팅아이크림25",
+      "img": "울트라리프팅아이크림25.png",
       "title": "울트라 리프팅 아이크림 25g",
       "desc": "대용량, 고농축 펩타이드와 모로코산 아르간 오일 함유",
       "originalPrice": 89000,
@@ -151,9 +131,7 @@
       "review": 4,
       "registration": 20,
       "promotion": false,
-      "byItem": [5],
-      "byLine": [5],
-      "byFunction": [2]
+      "pickIndex": [7, 15, 18]
     },
     {
       "img": "비타에너지잡티앰플패드65.png",
@@ -165,9 +143,7 @@
       "review": 6,
       "registration": 19,
       "promotion": true,
-      "byItem": [2],
-      "byLine": [3],
-      "byFunction": [3]
+      "pickIndex": [4, 13, 19]
     },
     {
       "img": "비타에너지잡티크림75.png",
@@ -179,9 +155,7 @@
       "review": 3,
       "registration": 18,
       "promotion": false,
-      "byItem": [5],
-      "byLine": [3],
-      "byFunction": [3]
+      "pickIndex": [7, 13, 19]
     },
     {
       "img": "랑벨스타터B.png",
@@ -193,9 +167,7 @@
       "review": 22,
       "registration": 1,
       "promotion": false,
-      "byItem": [1, 2, 5],
-      "byLine": [0, 2],
-      "byFunction": [1, 4]
+      "pickIndex": [3, 4, 7, 10, 12, 17, 20]
     },
     {
       "img": "랑벨스타터A.png",
@@ -207,9 +179,7 @@
       "review": 23,
       "registration": 2,
       "promotion": false,
-      "byItem": [1, 2, 5],
-      "byLine": [0, 2, 4],
-      "byFunction": [0, 1, 4]
+      "pickIndex": [3, 4, 7, 10, 12, 14, 16, 17, 20]
     },
     {
       "img": "랑바이오블랙시카앰플50.png",
@@ -221,9 +191,7 @@
       "review": 24,
       "registration": 3,
       "promotion": false,
-      "byItem": [3],
-      "byLine": [2],
-      "byFunction": [1]
+      "pickIndex": [5, 12, 17]
     },
     {
       "img": "비타에너지잡티앰플50.png",
@@ -235,9 +203,7 @@
       "review": 14,
       "registration": 17,
       "promotion": false,
-      "byItem": [3],
-      "byLine": [3],
-      "byFunction": [3]
+      "pickIndex": [5, 13, 19]
     },
     {
       "img": "수퍼내츄럴수분잠금토너210.png",
@@ -249,9 +215,7 @@
       "review": 21,
       "registration": 13,
       "promotion": false,
-      "byItem": [2],
-      "byLine": [4],
-      "byFunction": [0]
+      "pickIndex": [4, 14, 16]
     },
     {
       "img": "수퍼내츄럴수분잠금토너500.png",
@@ -263,9 +227,7 @@
       "review": 15,
       "registration": 12,
       "promotion": false,
-      "byItem": [2],
-      "byLine": [4],
-      "byFunction": [0]
+      "pickIndex": [4, 14, 16]
     },
     {
       "img": "수퍼내츄럴수분잠금앰플50.png",
@@ -277,9 +239,7 @@
       "review": 13,
       "registration": 11,
       "promotion": false,
-      "byItem": [3],
-      "byLine": [4],
-      "byFunction": [0]
+      "pickIndex": [5, 14, 16]
     },
     {
       "img": "수퍼내츄럴크림75.png",
@@ -291,9 +251,7 @@
       "review": 18,
       "registration": 10,
       "promotion": false,
-      "byItem": [5],
-      "byLine": [4],
-      "byFunction": [0]
+      "pickIndex": [7, 14, 16]
     },
     {
       "img": "수퍼내츄럴아쿠아수딩크림100.png",
@@ -305,9 +263,7 @@
       "review": 17,
       "registration": 9,
       "promotion": true,
-      "byItem": [5],
-      "byLine": [4],
-      "byFunction": [0]
+      "pickIndex": [7, 14, 16]
     },
     {
       "img": "천연안심화장솜40.png",
@@ -319,9 +275,7 @@
       "review": 19,
       "registration": 8,
       "promotion": false,
-      "byItem": [7],
-      "byLine": [4],
-      "byFunction": [0]
+      "pickIndex": [9, 14, 16]
     },
     {
       "img": "랑벨스킨쿨러.png",
@@ -333,9 +287,7 @@
       "review": 25,
       "registration": 4,
       "promotion": false,
-      "byItem": [5, 7],
-      "byLine": null,
-      "byFunction": null
+      "pickIndex": [7, 9]
     },
     {
       "img": "멀티5겹순면화장솜80.png",
@@ -347,9 +299,7 @@
       "review": 20,
       "registration": 5,
       "promotion": false,
-      "byItem": [7],
-      "byLine": [0],
-      "byFunction": [0, 4]
+      "pickIndex": [9, 10, 16, 20]
     }
   ]
 }

@@ -368,3 +368,10 @@ body::-webkit-scrollbar-thumb {
   background: #555;
   border-radius: 10px;
 }
+
+// 반응형
+@media all and(max-width:1750px) {
+  .container {
+    width: 80vw;
+  }
+}

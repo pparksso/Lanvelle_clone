@@ -211,6 +211,154 @@ const sortMaker = () => {
                 }
                 pickItemList.innerHTML = tempHtml;
                 countNum.innerHTML = count;
+              } else if (index === 0) {
+                count++;
+                if (pickEl.originalPrice > 0) {
+                  const percentage = 100 - Math.floor((pickEl.salePrice / pickEl.originalPrice) * 100);
+                  const originalPrice = pickEl.originalPrice.toLocaleString("ko-KR");
+                  const salePrice = pickEl.salePrice.toLocaleString("ko-KR");
+                  tempHtml += `
+                <li class="add purchaseOn el">
+                <a href="" class="">
+                  <div class="imgBox">
+                    <img src="${imgPath}${pickEl.img}" alt="${pickEl.title}" />
+                  </div>
+                </a>
+                <div class="right">
+                <div class="txtBox">
+                  <a href="">
+                    <h1 class="title">${pickEl.title}</h1>
+                    <p class="desc">${pickEl.desc}</p>
+                  </a>
+                </div>
+                <div class="priceBox">
+                  <span class="percent"><strong>${percentage}</strong>%</span><span class="originalPrice">${originalPrice}원</span><span class="salePrice"><strong>${salePrice}</strong>원</span>
+                </div>
+                <div class="purchaseBox">
+                  <ul>
+                    <li>
+                      <button><img src="../images/main/heat_btn.png" alt="찜하기" /></button>
+                    </li>
+                    <li>
+                      <button><img src="../images/main/cart_btn.png" alt="장바구니에 넣기" /></button>
+                    </li>
+                  </ul>
+                  <button class="card"><span class="material-icons"> credit_card </span>&nbsp;<span>바로구매</span></button>
+                </div>
+                </div>
+              </li>
+                `;
+                } else {
+                  tempHtml += `
+                <li class="add purchaseOn el">
+                <a href="" class="newBestImgBox">
+                  <div class="imgBox">
+                    <img src="${imgPath}${pickEl.img}" alt="${pickEl.title}" />
+                  </div>
+                </a>
+                <div class="right">
+                <div class="txtBox">
+                  <a href="">
+                    <h1 class="title">${pickEl.title}</h1>
+                    <p class="desc">${pickEl.desc}</p>
+                  </a>
+                </div>
+                <div class="priceBox">
+                  <span class="salePrice center"><strong>${pickEl.salePrice}</strong>원</span>
+                </div>
+                <div class="purchaseBox">
+                  <ul>
+                    <li>
+                      <button><img src="../images/main/heat_btn.png" alt="찜하기" /></button>
+                    </li>
+                    <li>
+                      <button><img src="../images/main/cart_btn.png" alt="장바구니에 넣기" /></button>
+                    </li>
+                  </ul>
+                  <button class="card"><span class="material-icons"> credit_card </span>&nbsp;<span>바로구매</span></button>
+                </div>
+                </div>
+              </li>
+                `;
+                }
+                pickItemList.innerHTML = tempHtml;
+                countNum.innerHTML = count;
+              } else if (index === 1 && pickEl.promotion === true) {
+                count++;
+                if (pickEl.originalPrice > 0) {
+                  const percentage = 100 - Math.floor((pickEl.salePrice / pickEl.originalPrice) * 100);
+                  const originalPrice = pickEl.originalPrice.toLocaleString("ko-KR");
+                  const salePrice = pickEl.salePrice.toLocaleString("ko-KR");
+                  tempHtml += `
+                <li class="add purchaseOn el">
+                <a href="" class="">
+                  <div class="imgBox">
+                    <img src="${imgPath}${pickEl.img}" alt="${pickEl.title}" />
+                  </div>
+                </a>
+                <div class="right">
+                <div class="txtBox">
+                  <a href="">
+                    <h1 class="title">${pickEl.title}</h1>
+                    <p class="desc">${pickEl.desc}</p>
+                  </a>
+                </div>
+                <div class="priceBox">
+                  <span class="percent"><strong>${percentage}</strong>%</span><span class="originalPrice">${originalPrice}원</span><span class="salePrice"><strong>${salePrice}</strong>원</span>
+                </div>
+                <div class="purchaseBox">
+                  <ul>
+                    <li>
+                      <button><img src="../images/main/heat_btn.png" alt="찜하기" /></button>
+                    </li>
+                    <li>
+                      <button><img src="../images/main/cart_btn.png" alt="장바구니에 넣기" /></button>
+                    </li>
+                  </ul>
+                  <button class="card"><span class="material-icons"> credit_card </span>&nbsp;<span>바로구매</span></button>
+                </div>
+                </div>
+              </li>
+                `;
+                } else {
+                  tempHtml += `
+                <li class="add purchaseOn el">
+                <a href="" class="newBestImgBox">
+                  <div class="imgBox">
+                    <img src="${imgPath}${pickEl.img}" alt="${pickEl.title}" />
+                  </div>
+                </a>
+                <div class="right">
+                <div class="txtBox">
+                  <a href="">
+                    <h1 class="title">${pickEl.title}</h1>
+                    <p class="desc">${pickEl.desc}</p>
+                  </a>
+                </div>
+                <div class="priceBox">
+                  <span class="salePrice center"><strong>${pickEl.salePrice}</strong>원</span>
+                </div>
+                <div class="purchaseBox">
+                  <ul>
+                    <li>
+                      <button><img src="../images/main/heat_btn.png" alt="찜하기" /></button>
+                    </li>
+                    <li>
+                      <button><img src="../images/main/cart_btn.png" alt="장바구니에 넣기" /></button>
+                    </li>
+                  </ul>
+                  <button class="card"><span class="material-icons"> credit_card </span>&nbsp;<span>바로구매</span></button>
+                </div>
+                </div>
+              </li>
+                `;
+                }
+                pickItemList.innerHTML = tempHtml;
+                countNum.innerHTML = count;
+              } else if (idx.includes(index)) {
+                count = 0;
+                noItem.classList.add("on");
+                countNum.innerHTML = count;
               }
             });
           });

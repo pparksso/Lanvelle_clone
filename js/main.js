@@ -8,6 +8,8 @@ const saleImgBox = document.querySelector("#timesale .saleImgBox");
 const timerArea = document.querySelector("#timesale .timer");
 const saleTxtBox = document.querySelector("#timesale .txtBox");
 const salePriceBox = document.querySelector("#timesale .priceBox");
+const instaList = document.querySelector("#instagram .swiper-wrapper");
+const instaItems = document.querySelectorAll("#instagram .swiper-slide");
 const hashTag = document.querySelector("#instagram .hashtag");
 const tabsArr = [...tabs];
 
@@ -22,12 +24,28 @@ const mainSwiper = new Swiper("#mainVisual", {
     delay: 8000,
   },
 });
-const instaSwiper = new Swiper(".instagramWrap", {
-  centeredSlides: true,
-  centerInsufficientSlides: true,
-  slidesPerView: 4.5,
+
+let instaSwiper = undefined;
+let screenWidth = body.clientWidth;
+function resizeSwiper() {
+  if (screenWidth > 1620 && instaSwiper == undefined) {
+    instaSwiper = new Swiper(".instagramWrap", {
+      centeredSlides: true,
+      centerInsufficientSlides: true,
+      slidesPerView: 4.5,
+    });
+  } else if (screenWidth < 1621 && instaSwiper != undefined) {
+    instaSwiper.destroy();
+    instaSwiper = undefined;
+  }
+}
+
+resizeSwiper();
+
+window.addEventListener("resize", () => {
+  screenWidth = body.clientWidth;
+  resizeSwiper();
 });
-instaSwiper.translateTo(-100);
 //컨텐츠 탭판넬
 tabs.forEach((item, idx) => {
   item.addEventListener("click", () => {
@@ -193,30 +211,29 @@ const contentsMaker = (title, area) => {
       const newBestSwiper = new Swiper("#newBest", {
         speed: 1000,
         loop: true,
-        slidesPerView: 5,
-        spaceBetween: 20,
         navigation: {
           nextEl: "#newBest .next",
           prevEl: "#newBest .prev",
         },
         // Responsive breakpoints
-        // breakpoints: {
-        //   // when window width is >= 320px
-        //   320: {
-        //     slidesPerView: 2,
-        //     spaceBetween: 20
-        //   },
-        //   // when window width is >= 480px
-        //   480: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 30
-        //   },
-        //   // when window width is >= 640px
-        //   640: {
-        //     slidesPerView: 4,
-        //     spaceBetween: 40
-        //   }
-        // }
+        breakpoints: {
+          // when window width is >= 320px
+          1750: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+          // when window width is >= 480px
+          1400: {
+            slidesPerView: 4,
+          },
+          // when window width is >= 640px
+          1280: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 2,
+          },
+        },
       });
     })
     .then(() => {

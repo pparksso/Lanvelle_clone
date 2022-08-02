@@ -8,8 +8,8 @@ const saleImgBox = document.querySelector("#timesale .saleImgBox");
 const timerArea = document.querySelector("#timesale .timer");
 const saleTxtBox = document.querySelector("#timesale .txtBox");
 const salePriceBox = document.querySelector("#timesale .priceBox");
-const instaList = document.querySelector("#instagram .swiper-wrapper");
-const instaItems = document.querySelectorAll("#instagram .swiper-slide");
+const instaList = document.querySelector("#instagram ul");
+const instaItems = document.querySelectorAll("#instagram li");
 const hashTag = document.querySelector("#instagram .hashtag");
 const tabsArr = [...tabs];
 
@@ -26,9 +26,13 @@ const mainSwiper = new Swiper("#mainVisual", {
 });
 
 let instaSwiper = undefined;
-let screenWidth = body.clientWidth;
 function resizeSwiper() {
+  let screenWidth = body.clientWidth;
   if (screenWidth > 1620 && instaSwiper == undefined) {
+    instaList.classList.add("swiper-wrapper");
+    instaItems.forEach((item) => {
+      item.classList.add("swiper-slide");
+    });
     instaSwiper = new Swiper(".instagramWrap", {
       centeredSlides: true,
       centerInsufficientSlides: true,
@@ -37,13 +41,14 @@ function resizeSwiper() {
   } else if (screenWidth < 1621 && instaSwiper != undefined) {
     instaSwiper.destroy();
     instaSwiper = undefined;
+    instaList.classList.remove("swiper-wrapper");
+    instaItems.forEach((item) => {
+      item.classList.remove("swiper-slide");
+    });
   }
 }
-
 resizeSwiper();
-
 window.addEventListener("resize", () => {
-  screenWidth = body.clientWidth;
   resizeSwiper();
 });
 //컨텐츠 탭판넬

@@ -8,7 +8,8 @@ const video = document.querySelector("#bestProduct .videoBox iframe");
 const scrollTopBtnList = document.querySelector("#scrollTop");
 const scrollTopBtn = document.querySelector("#scrollTop .top");
 const hamberger = document.querySelector("#mobileHeader .hamberger button");
-console.log("🚀 ~ file: layout.js ~ line 11 ~ hamberger", hamberger);
+const mDepthArrow = document.querySelectorAll("#mGnb .depthArrow");
+const mDepth03s = document.querySelectorAll("#mGnb .mDepth03");
 
 const depth01Arr = [...depth01s];
 const newBest = depth01s[2];
@@ -61,6 +62,18 @@ window.addEventListener("scroll", () => {
 
 hamberger.addEventListener("click", function () {
   hamberger.classList.toggle("on");
+});
+
+mDepthArrow.forEach((item, index) => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+    mDepth03s.forEach((item02, index02) => {
+      if (index === index02) {
+        item02.classList.toggle("on");
+        item.classList.toggle("on");
+      }
+    });
+  });
 });
 
 scrollTopBtn.addEventListener("click", () => {

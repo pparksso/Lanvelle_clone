@@ -3,11 +3,12 @@ const pannels = document.querySelectorAll("#contents .pannel");
 const timeSaleArea = document.querySelector("#timesale");
 const newBestArea = document.querySelector("#newBest ul");
 const promotionArea = document.querySelector("#promotion ul");
-const bestProductArea = document.querySelector("#bestProduct ul");
+const bestProductArea = document.querySelector("#bestProduct .item");
 const saleImgBox = document.querySelector("#timesale .saleImgBox");
 const timerArea = document.querySelector("#timesale .timer");
 const saleTxtBox = document.querySelector("#timesale .txtBox");
 const salePriceBox = document.querySelector("#timesale .priceBox");
+const keywordBox = document.querySelector("#bestProduct .keywordBox");
 const instaList = document.querySelector("#instagram ul");
 const instaItems = document.querySelectorAll("#instagram li");
 const hashTag = document.querySelector("#instagram .hashtag");
@@ -47,10 +48,22 @@ function resizeSwiper() {
     });
   }
 }
+const keywordBoxOpen = () => {
+  let screenWidth = body.clientWidth;
+  if (screenWidth < 1521) {
+    keywordBox.classList.add("on");
+  } else if (screenWidth > 1520) {
+    keywordBox.classList.remove("on");
+  }
+};
+
 resizeSwiper();
+
 window.addEventListener("resize", () => {
   resizeSwiper();
+  keywordBoxOpen();
 });
+
 //컨텐츠 탭판넬
 tabs.forEach((item, idx) => {
   item.addEventListener("click", () => {

@@ -7,6 +7,9 @@ const headerLabelCloseBtn = document.querySelector("#headerLabel .closeBtn");
 const video = document.querySelector("#bestProduct .videoBox iframe");
 const scrollTopBtnList = document.querySelector("#scrollTop");
 const scrollTopBtn = document.querySelector("#scrollTop .top");
+const hamberger = document.querySelector("#mobileHeader .hamberger button");
+console.log("🚀 ~ file: layout.js ~ line 11 ~ hamberger", hamberger);
+
 const depth01Arr = [...depth01s];
 const newBest = depth01s[2];
 
@@ -54,6 +57,10 @@ window.addEventListener("scroll", () => {
     header.classList.remove("scrollDown");
     scrollTopBtnList.classList.remove("on");
   }
+});
+
+hamberger.addEventListener("click", function () {
+  hamberger.classList.toggle("on");
 });
 
 scrollTopBtn.addEventListener("click", () => {

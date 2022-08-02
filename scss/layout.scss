@@ -230,6 +230,7 @@ span {
   background-color: #fff;
   display: flex;
   position: relative;
+  // overflow-y: auto;
   justify-content: space-between;
   align-items: center;
   .hamberger {
@@ -276,6 +277,7 @@ span {
     margin-right: 20px;
   }
   #mGnb {
+    overflow-y: auto;
     position: absolute;
     z-index: 99;
     top: 60px;
@@ -283,6 +285,58 @@ span {
     width: 100vw;
     height: calc(100vh - 100px);
     background-color: #fff;
+    .loginMenu {
+      margin: 20px 20px;
+      font-weight: 400;
+      font-family: "Noto Sans KR", sans-serif;
+      font-size: 14px;
+      color: #111;
+      display: flex;
+      align-items: center;
+      a {
+        &:nth-child(1) {
+          &::after {
+            content: "";
+            width: 2px;
+            height: 10px;
+            background-color: #ddd;
+            display: inline-block;
+            margin: 0 10px;
+          }
+        }
+      }
+      .coupon {
+        font-weight: 500;
+        font-family: "Lato", sans-serif;
+        color: #213429;
+        font-size: 12px;
+        background-color: #e9ecef;
+        padding: 3px 5px;
+        margin-left: 7px;
+        border-radius: 5px;
+      }
+    }
+    .mGnbImgBox {
+      margin: 0 20px;
+      img {
+        width: 100%;
+      }
+    }
+    .mGnbList {
+      .mDepth01 {
+        span {
+          font-weight: 700;
+          font-size: 26px;
+          font-family: "Cormorant", serif;
+        }
+        .mDepth02 {
+          li {
+            a {
+            }
+          }
+        }
+      }
+    }
   }
 }
 

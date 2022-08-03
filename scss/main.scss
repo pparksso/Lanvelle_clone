@@ -222,6 +222,12 @@
       .material-icons {
         font-size: 35px;
       }
+      &.promoPage {
+        display: none;
+        &.on {
+          display: block;
+        }
+      }
     }
     .add {
       transition: opacity 0.25s ease-in-out;

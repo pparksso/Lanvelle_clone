@@ -1,5 +1,7 @@
 {
   "imgPath": "../images/main/",
+  "swiper": true,
+  "title": "promotion",
   "items": [
     {
       "img": "promotion01.png",

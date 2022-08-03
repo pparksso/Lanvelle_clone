@@ -228,9 +228,8 @@ span {
 #mobileHeader {
   height: 60px;
   background-color: #fff;
-  display: flex;
+  display: none;
   position: relative;
-  // overflow-y: auto;
   justify-content: space-between;
   align-items: center;
   .hamberger {
@@ -281,10 +280,14 @@ span {
     position: absolute;
     z-index: 99;
     top: 60px;
-    left: 0;
+    right: 100%;
     width: 100vw;
     height: calc(100vh - 100px);
     background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    &.open {
+      right: 0;
+    }
     .loginMenu {
       margin: 20px 20px;
       font-weight: 400;
@@ -326,37 +329,50 @@ span {
       margin: 30px 0 0 20px;
       .mDepth01 {
         span {
-          display: block;
+          display: inline-block;
           padding: 10px 0;
           cursor: pointer;
           font-weight: 700;
           font-size: 26px;
           font-family: "Cormorant", serif;
-        }
-        .mDepth02 li {
-          a {
-            display: block;
-            padding: 5px 0;
+          &.off {
+            color: #c8c8c8;
           }
-          .depthArrow {
-            margin: 10px 0;
-            display: flex;
-            align-items: center;
-            &.on {
+        }
+        .mDepth02 {
+          height: 0;
+          overflow-y: hidden;
+          // transition: height 0.25s ease;
+          &.on {
+            height: auto;
+          }
+          li {
+            a {
+              display: block;
+              padding: 5px 0;
+            }
+            .depthArrow {
+              margin: 10px 0;
+              display: flex;
+              align-items: center;
+              &.on {
+                &:after {
+                  display: block;
+                }
+              }
               &:after {
-                display: block;
+                content: "\e5cc";
+                font-family: "Material Icons";
+                font-size: 14px;
+                padding-left: 5px;
+                display: none;
               }
             }
-            &:after {
-              content: "\e5cc";
-              font-family: "Material Icons";
-              font-size: 14px;
-              padding-left: 5px;
-              display: none;
+            .mDepth03 li a {
+              display: inline-block;
             }
           }
         }
-
         .mDepth03 {
           height: 0;
           overflow: hidden;
@@ -517,6 +533,21 @@ span {
     }
   }
 }
+#mScrollTop {
+  position: fixed;
+  bottom: 20px;
+  right: -60px;
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.25s ease-in-out;
+  &.on {
+    right: 20px;
+  }
+  .scrollBox img {
+    width: 44px;
+    height: 44px;
+  }
+}
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -541,6 +572,12 @@ body::-webkit-scrollbar-thumb {
 
 @media all and(max-width:1250px) {
   #header {
+    display: none;
+  }
+  #mobileHeader {
+    display: flex;
+  }
+  #scrollTop {
     display: none;
   }
 }

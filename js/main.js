@@ -3,6 +3,7 @@ const pannels = document.querySelectorAll("#contents .pannel");
 const timeSaleArea = document.querySelector("#timesale");
 const newBestArea = document.querySelector("#newBest ul");
 const promotionArea = document.querySelector("#promotion ul");
+const promoPageBtn = document.querySelector("#promotion .promoPage");
 const bestProductArea = document.querySelector("#bestProduct .item");
 const saleImgBox = document.querySelector("#timesale .saleImgBox");
 const timerArea = document.querySelector("#timesale .timer");
@@ -217,8 +218,15 @@ const contentsMaker = (title, area) => {
         `;
         }
         area.innerHTML = tempHtml;
-        if (data.swiper === true) {
+        if (data.swiper === true && data.title === "newBest") {
           const swiperList = document.querySelectorAll("#newBest .list .add");
+          swiperList.forEach((li) => {
+            li.classList.add("swiper-slide");
+          });
+        }
+
+        if (data.swiper === true && data.title === "promotion") {
+          const swiperList = document.querySelectorAll("#promotion .promotionList .add");
           swiperList.forEach((li) => {
             li.classList.add("swiper-slide");
           });
@@ -227,6 +235,7 @@ const contentsMaker = (title, area) => {
     })
     .then(() => {
       const newBestSwiper = new Swiper("#newBest", {
+        slidesPerView: 1,
         speed: 1000,
         loop: true,
         navigation: {
@@ -252,6 +261,48 @@ const contentsMaker = (title, area) => {
             slidesPerView: 2,
           },
         },
+      });
+
+      let promoSwiper = undefined;
+      function promoResizeSwiper() {
+        let screenWidth = body.clientWidth;
+        if (screenWidth < 1581 && promoSwiper == undefined) {
+          promoPageBtn.classList.add("on");
+          promoSwiper = new Swiper("#promotion", {
+            speed: 1000,
+            slidesPerView: 1,
+            // loop: true,
+            navigation: {
+              nextEl: "#promotion .next",
+              prevEl: "#promotion .prev",
+            },
+            // Responsive breakpoints
+            breakpoints: {
+              1580: {
+                slidesPerView: 4,
+              },
+              // when window width is >= 640px
+              1280: {
+                slidesPerView: 3,
+              },
+              1024: {
+                slidesPerView: 2,
+              },
+            },
+          });
+        } else if (screenWidth > 1580 && promoSwiper != undefined) {
+          promoSwiper.destroy();
+          promoSwiper = undefined;
+          promotionArea.classList.remove("swiper-wrapper");
+          const swiperList = document.querySelectorAll("#promotion .promotionList .add");
+          swiperList.forEach((li) => {
+            li.classList.remove("swiper-slide");
+          });
+        }
+      }
+      promoResizeSwiper();
+      window.addEventListener("resize", () => {
+        promoResizeSwiper();
       });
     })
     .then(() => {

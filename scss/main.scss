@@ -353,6 +353,9 @@
     &:hover {
       opacity: 0.6;
     }
+    a img {
+      width: 100%;
+    }
   }
   .hashtagBox {
     position: relative;
@@ -413,6 +416,12 @@
     }
   }
 }
+
+@media all and(max-width:1580px) {
+  #contents .pannel .promotionList .add:not(:last-child) {
+    margin: 0;
+  }
+}
 @media all and(max-width:1520px) {
   #bestProduct .container {
     flex-direction: column;
@@ -451,5 +460,21 @@
     }
   }
 }
-@media all and(max-width:1250px) {
+@media all and(max-width:1260px) {
+  #contents .pannel .pagination {
+    .prev {
+      left: 5%;
+    }
+    .next {
+      right: 5%;
+    }
+  }
+}
+@media all and(max-width:800px) {
+  #instagram .hashtagBox div {
+    bottom: clamp(-40px, -45px, -50px);
+    span {
+      font-size: clamp(50px, 12.5vw, 100px);
+    }
+  }
 }

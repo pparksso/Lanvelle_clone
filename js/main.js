@@ -281,7 +281,6 @@ const contentsMaker = (title, area) => {
               1580: {
                 slidesPerView: 4,
               },
-              // when window width is >= 640px
               1280: {
                 slidesPerView: 3,
               },
@@ -293,11 +292,13 @@ const contentsMaker = (title, area) => {
         } else if (screenWidth > 1580 && promoSwiper != undefined) {
           promoSwiper.destroy();
           promoSwiper = undefined;
-          promotionArea.classList.remove("swiper-wrapper");
-          const swiperList = document.querySelectorAll("#promotion .promotionList .add");
-          swiperList.forEach((li) => {
-            li.classList.remove("swiper-slide");
-          });
+          promoPageBtn.classList.remove("on");
+
+          // promotionArea.classList.remove("swiper-wrapper");
+          // const swiperList = document.querySelectorAll("#promotion .promotionList .add");
+          // swiperList.forEach((li) => {
+          //   li.classList.remove("swiper-slide");
+          // });
         }
       }
       promoResizeSwiper();

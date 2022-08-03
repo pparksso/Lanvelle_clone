@@ -81,6 +81,9 @@
 
 #mainVisual {
   position: relative;
+  &.mobile {
+    padding-top: 60px;
+  }
   ul li {
     a {
       .imgBox {
@@ -449,12 +452,18 @@
     }
   }
 }
-@media all and(max-width:1280px) {
+@media all and(max-width:1250px) {
   #mainVisual {
+    padding-top: 100px;
+    transition: padding 0.25s ease-in-out;
     ul li a {
       .imgBox {
         &::before {
-          padding-top: 56.25%;
+          padding-top: 100%;
+        }
+        img {
+          width: 100vw;
+          height: 100vh;
         }
       }
     }

@@ -494,18 +494,21 @@ span {
   margin-top: 100px;
   background-color: #2e2e2e;
   padding: 40px 15px;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   .logo {
     margin-bottom: 25px;
   }
   .center {
+    padding-bottom: 24px;
     text-align: center;
     strong {
       font-size: 13px;
       color: #fff;
       font-family: "Lato", sans-serif;
+      display: inline-block;
+      padding-bottom: 6px;
       span {
         font-family: "Noto Sans KR", sans-serif;
         font-weight: 500;
@@ -516,27 +519,55 @@ span {
       font-size: 12px;
       font-weight: 400;
       font-family: "Lato", sans-serif;
+      line-height: 1.3;
     }
   }
   .tab {
     text-align: center;
-    button strong {
-      font-family: "Lato", sans-serif;
-      font-weight: 500;
-      color: #fff;
-      font-size: 12px;
-      display: flex;
-      align-items: center;
-      &::after {
-        content: "\e5cf";
-        font-family: "Material Icons";
-        color: #828282;
+    button {
+      &.click {
+        strong {
+          &::after {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      strong {
+        font-family: "Lato", sans-serif;
+        font-weight: 500;
+        color: #fff;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        &::after {
+          content: "\e5cf";
+          font-family: "Material Icons";
+          color: #828282;
+          font-size: 17px;
+          margin-left: 4px;
+          transition: all 0.25s ease-in-out;
+        }
       }
     }
     .infoBox {
       font-family: "Noto Sans KR", sans-serif;
+      height: 0;
+      overflow-y: hidden;
+      transition: all 0.25s ease-in-out;
+      &.open {
+        padding: 20px 0 14px 0;
+        height: 120px;
+      }
       .infoLink {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 30%;
+        margin: 0 auto;
+        padding-bottom: 12px;
         li {
+          margin-right: 10px;
+          line-height: 1.3;
           a {
             font-weight: 500;
             color: #fff;
@@ -548,13 +579,27 @@ span {
         span {
           font-size: 11px;
           color: #828282;
+          display: inline-block;
           font-weight: 350;
+          &:not(&:last-child) {
+            &::after {
+              content: "";
+              display: inline-block;
+              width: 1px;
+              margin: 0 5px;
+              background-color: #828282;
+              height: 10px;
+            }
+          }
         }
       }
     }
   }
   .copyright {
+    padding: 10px 0 16px 0;
+    text-align: center;
     p {
+      line-height: 1.3;
       font-family: "Lato", sans-serif;
       font-weight: 400;
       font-size: 10px;
@@ -651,6 +696,9 @@ body::-webkit-scrollbar-thumb {
   }
   #footer {
     display: none;
+  }
+  #mFooter {
+    display: flex;
   }
   #scrollTop {
     display: none;

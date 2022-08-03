@@ -15,6 +15,9 @@ const mDepth02s = document.querySelectorAll("#mGnb .mDepth02");
 const mDepthArrow = document.querySelectorAll("#mGnb .depthArrow");
 const mDepth03s = document.querySelectorAll("#mGnb .mDepth03");
 const mScrollTop = document.querySelector("#mScrollTop");
+const infoBtn = document.querySelector("#mFooter .tab button");
+const infoBox = document.querySelector("#mFooter .infoBox");
+const mainVisual = document.querySelector("#mainVisual");
 
 const depth01Arr = [...depth01s];
 const newBest = depth01s[2];
@@ -45,12 +48,23 @@ newBest.addEventListener("mouseleave", function () {
   });
   header.classList.remove("on");
 });
-
-headerLabelCloseBtn.addEventListener("click", () => {
-  headerLabel.classList.add("off");
-  video.classList.add("on");
+const headerLabelSlideUp = () => {
+  headerLabelCloseBtn.addEventListener("click", () => {
+    let screenWidth = body.clientWidth;
+    if (screenWidth > 1250) {
+      headerLabel.classList.add("off");
+      video.classList.add("on");
+      mainVisual.classList.remove("mobile");
+    } else if (screenWidth < 1251) {
+      headerLabel.classList.add("off");
+      mainVisual.classList.add("mobile");
+    }
+  });
+};
+headerLabelSlideUp();
+window.addEventListener("resize", () => {
+  headerLabelSlideUp();
 });
-
 window.addEventListener("scroll", () => {
   let scrollTop = window.scrollY;
   if (scrollTop > 0) {
@@ -120,4 +134,9 @@ mScrollTop.addEventListener("click", () => {
     left: 0,
     top: body.offsetTop,
   });
+});
+
+infoBtn.addEventListener("click", function () {
+  this.classList.toggle("click");
+  infoBox.classList.toggle("open");
 });

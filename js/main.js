@@ -1,3 +1,7 @@
+const mainImg01s = document.querySelectorAll("#mainVisual .mainImg01");
+const mainImg02s = document.querySelectorAll("#mainVisual .mainImg02");
+const main02Titles = document.querySelectorAll("#mainVisual .title02");
+const main02Subtitles = document.querySelectorAll("#mainVisual .subTitle02");
 const tabs = document.querySelectorAll("#contents .tabs ul li");
 const pannels = document.querySelectorAll("#contents .pannel");
 const timeSaleArea = document.querySelector("#timesale");
@@ -16,14 +20,19 @@ const hashTag = document.querySelector("#instagram .hashtag");
 const tabsArr = [...tabs];
 
 const mainSwiper = new Swiper("#mainVisual", {
-  navigation: {
-    nextEl: "#mainVisual .next",
-    prevEl: "#mainVisual .prev",
-  },
   loop: true,
   speed: 1000,
   autoplay: {
     delay: 8000,
+  },
+  navigation: {
+    nextEl: "#mainVisual .next",
+    prevEl: "#mainVisual .prev",
+  },
+  pagination: {
+    el: "#mainVisual .swiper-pagination",
+    type: "bullets",
+    clickable: true,
   },
 });
 
@@ -49,6 +58,7 @@ function resizeSwiper() {
     });
   }
 }
+// 인기키워드 생성
 const keywordBoxOpen = () => {
   let screenWidth = body.clientWidth;
   if (screenWidth < 1521) {
@@ -57,12 +67,45 @@ const keywordBoxOpen = () => {
     keywordBox.classList.remove("on");
   }
 };
-
+//메인비쥬얼 이미지 변경
+const mainVisualChange = () => {
+  let screenWidth = body.clientWidth;
+  const imgChange = (name, num, alt, jpg, png) => {
+    name.forEach((item) => {
+      if (screenWidth < 1251) {
+        item.innerHTML = `<img src="../images/main/m_main0${num}.${jpg}" alt="${alt}" />`;
+      } else if (screenWidth > 1250) {
+        item.innerHTML = `<img src="../images/main/main0${num}.${png}" alt="${alt}" />`;
+      }
+    });
+  };
+  imgChange(mainImg01s, 1, "올리브영 구매인증 페이백 이벤트", "jpg", "jpg");
+  imgChange(mainImg02s, 2, "랑벨", "jpg", "png");
+};
+// 메인비쥬얼02 타이틀, 서브타이틀 변경
+const mainTitleChange = () => {
+  let screenWidth = body.clientWidth;
+  const titleChange = (name, m, pc) => {
+    name.forEach((item) => {
+      if (screenWidth < 1251) {
+        item.innerHTML = `${m}`;
+      } else if (screenWidth > 1250) {
+        item.innerHTML = `${pc}`;
+      }
+    });
+  };
+  titleChange(main02Titles, "LANBELLE X CHAHYUNSEUNG", "");
+  titleChange(main02Subtitles, "BLACK CICA", "Lanbelle x 차현승");
+};
+mainVisualChange();
 resizeSwiper();
+mainTitleChange();
 
 window.addEventListener("resize", () => {
   resizeSwiper();
   keywordBoxOpen();
+  mainVisualChange();
+  mainTitleChange();
 });
 
 //컨텐츠 탭판넬

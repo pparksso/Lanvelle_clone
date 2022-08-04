@@ -81,9 +81,6 @@
 
 #mainVisual {
   position: relative;
-  &.mobile {
-    padding-top: 60px;
-  }
   ul li {
     a {
       .imgBox {
@@ -116,12 +113,17 @@
         }
         .subTitle {
           font-weight: 600;
+          font-family: "Cormorant", serif;
           font-size: 40px;
           margin: 50px 0 25px 0;
+          &.green {
+            color: #213429;
+          }
         }
         .desc {
           font-weight: 400;
           font-size: 22px;
+          font-family: "Noto Sans KR", sans-serif;
         }
       }
     }
@@ -140,6 +142,12 @@
     }
     .material-icons {
       font-size: 35px;
+    }
+  }
+  .swiper-pagination {
+    margin-bottom: 20px;
+    .swiper-pagination-bullet-active {
+      background-color: #333;
     }
   }
 }
@@ -455,30 +463,48 @@
 @media all and(max-width:1250px) {
   #mainVisual {
     padding-top: 100px;
-    transition: padding 0.25s ease-in-out;
     ul li a {
       .imgBox {
         &::before {
-          padding-top: 100%;
+          padding-top: 150%;
         }
-        img {
-          width: 100vw;
-          height: 100vh;
+      }
+      .txtBox {
+        top: auto;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        .title {
+          font-weight: 700;
+          color: #16501d;
+          font-size: 16px;
+        }
+        .subTitle {
+          font-size: 36px;
+          color: #212529;
+          font-family: "Cormorant";
+          margin: 15px 0;
+          &.green {
+            font-family: "Noto Serif KR";
+            color: #212529;
+            font-size: 30px;
+          }
+        }
+        .desc {
+          font-weight: 350;
+          font-size: 14px;
+          color: #495057;
         }
       }
     }
-  }
-}
-@media all and(max-width:1260px) {
-  #contents .pannel .pagination {
-    .prev {
-      left: 5%;
-    }
-    .next {
-      right: 5%;
+
+    .swiper-pagination {
+      display: none;
     }
   }
 }
+
 @media all and(max-width:800px) {
   #instagram .hashtagBox div {
     bottom: clamp(-40px, -45px, -50px);

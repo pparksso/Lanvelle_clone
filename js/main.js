@@ -20,21 +20,28 @@ const hashTag = document.querySelector("#instagram .hashtag");
 const tabsArr = [...tabs];
 
 const mainSwiper = new Swiper("#mainVisual", {
-  loop: true,
   speed: 1000,
   autoplay: {
-    delay: 8000,
+    delay: 5000,
   },
   navigation: {
     nextEl: "#mainVisual .next",
     prevEl: "#mainVisual .prev",
   },
   pagination: {
-    el: "#mainVisual .swiper-pagination",
+    el: "#mainVisual .swiper-pagination-bulletBox",
     type: "bullets",
     clickable: true,
   },
 });
+
+const pagingSwiper = new Swiper("#mainVisual", {
+  pagination: {
+    el: "#mainVisual .swiper-pagination-fraction",
+    type: "fraction",
+  },
+});
+mainSwiper.controller.control = pagingSwiper;
 
 let instaSwiper = undefined;
 function resizeSwiper() {
@@ -306,22 +313,27 @@ const contentsMaker = (title, area) => {
         },
       });
 
-      let promoSwiper = undefined;
+      let promoSwiper = null;
       function promoResizeSwiper() {
         let screenWidth = body.clientWidth;
-        if (screenWidth < 1581 && promoSwiper == undefined) {
+        if (screenWidth < 1581 && promoSwiper == null) {
           promoPageBtn.classList.add("on");
           promoSwiper = new Swiper("#promotion", {
-            speed: 1000,
             slidesPerView: 1,
-            // loop: true,
+            speed: 1000,
+            observer: true,
+            observeParents: true,
             navigation: {
               nextEl: "#promotion .next",
               prevEl: "#promotion .prev",
             },
             // Responsive breakpoints
             breakpoints: {
-              1580: {
+              1750: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+              },
+              1400: {
                 slidesPerView: 4,
               },
               1280: {
@@ -332,16 +344,10 @@ const contentsMaker = (title, area) => {
               },
             },
           });
-        } else if (screenWidth > 1580 && promoSwiper != undefined) {
+        } else if (screenWidth > 1580 && promoSwiper != null) {
           promoSwiper.destroy();
-          promoSwiper = undefined;
+          promoSwiper = null;
           promoPageBtn.classList.remove("on");
-
-          // promotionArea.classList.remove("swiper-wrapper");
-          // const swiperList = document.querySelectorAll("#promotion .promotionList .add");
-          // swiperList.forEach((li) => {
-          //   li.classList.remove("swiper-slide");
-          // });
         }
       }
       promoResizeSwiper();

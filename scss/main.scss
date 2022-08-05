@@ -81,6 +81,9 @@
 
 #mainVisual {
   position: relative;
+  &.mobile {
+    padding-top: 60px;
+  }
   ul li {
     a {
       .imgBox {
@@ -131,7 +134,7 @@
   .pagination {
     button {
       position: absolute;
-      z-index: 1;
+      z-index: 2;
       top: 46%;
     }
     .prev {
@@ -144,10 +147,28 @@
       font-size: 35px;
     }
   }
-  .swiper-pagination {
-    margin-bottom: 20px;
+  .swiper-pagination-bulletBox {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    z-index: 1;
     .swiper-pagination-bullet-active {
       background-color: #333;
+    }
+  }
+  .swiper-pagination-fraction {
+    display: none;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    position: absolute;
+    bottom: 2%;
+    left: 49%;
+    z-index: 1;
+    .swiper-pagination-current {
+      font-size: 16px;
+      color: #16501d;
     }
   }
 }
@@ -189,12 +210,14 @@
       width: 100%;
       height: 360px;
       z-index: -1;
+      left: 0;
+      top: 0;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
     }
     &.on {
-      display: flex;
+      display: block;
     }
     .purchaseOn:hover {
       .purchaseBox {
@@ -202,8 +225,8 @@
       }
     }
     .promotionList {
-      display: flex;
-      justify-content: center;
+      // display: flex;
+      // justify-content: center;
       .add {
         width: 360px;
         &:not(:last-child) {
@@ -428,9 +451,17 @@
   }
 }
 
+@media all and(min-width:1579px) {
+  #contents .pannel .promotionList {
+    display: flex;
+    justify-content: center;
+  }
+}
 @media all and(max-width:1580px) {
-  #contents .pannel .promotionList .add:not(:last-child) {
-    margin: 0;
+  #contents .pannel .promotionList {
+    .add:not(:last-child) {
+      margin: 0;
+    }
   }
 }
 @media all and(max-width:1520px) {
@@ -498,18 +529,82 @@
         }
       }
     }
-
-    .swiper-pagination {
+    .pagination {
+      button {
+        top: auto;
+        bottom: 1.6%;
+      }
+      .prev {
+        left: 46%;
+      }
+      .next {
+        right: 46%;
+      }
+      .material-icons {
+        font-size: 18px;
+      }
+    }
+    .swiper-pagination-bullet {
       display: none;
     }
+    .swiper-pagination-fraction {
+      display: block;
+    }
+  }
+  #bestProduct .container .keywordBox {
+    width: 40%;
   }
 }
 
-@media all and(max-width:800px) {
+@media all and(max-width:830px) {
+  #mainVisual {
+    ul li a .txtBox {
+      .title {
+        font-size: clamp(13px, 1.9vw, 16px);
+      }
+      .subTitle {
+        font-size: clamp(28px, 3.8vw, 32px);
+        &.green {
+          font-size: clamp(26px, 3.6vw, 30px);
+        }
+      }
+    }
+    .pagination {
+      .prev {
+        left: 43%;
+      }
+      .next {
+        right: 43%;
+      }
+      .material-icons {
+        font-size: 16px;
+      }
+    }
+  }
+  #contents .tabs ul li {
+    font-size: clamp(30px, 4.5vw, 38px);
+  }
+  #bestProduct .container {
+    .keywordBox {
+      width: 70%;
+    }
+    .videoBox iframe {
+      width: 100%;
+      height: 50vh;
+      margin-bottom: 70px;
+    }
+    .bestProductList {
+      .titleBox {
+        text-align: center;
+      }
+    }
+  }
   #instagram .hashtagBox div {
     bottom: clamp(-40px, -45px, -50px);
     span {
       font-size: clamp(50px, 12.5vw, 100px);
     }
   }
+}
+@media all and(max-width:530px) {
 }

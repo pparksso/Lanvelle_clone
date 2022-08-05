@@ -274,6 +274,30 @@ span {
   }
   .mUtilMenu {
     margin-right: 20px;
+    .mCart {
+      position: relative;
+      display: inline-block;
+      &::after {
+        content: "";
+        display: block;
+        width: 15px;
+        height: 15px;
+        background-color: #213429;
+        border-radius: 100%;
+        position: absolute;
+        top: -30%;
+        right: 0;
+      }
+      &:before {
+        content: "0";
+        color: #fff;
+        font-size: 10px;
+        z-index: 1;
+        position: absolute;
+        top: -25%;
+        right: 15%;
+      }
+    }
   }
   #mGnb {
     overflow-y: auto;
@@ -651,6 +675,7 @@ span {
   }
 }
 #mScrollTop {
+  display: none;
   position: fixed;
   bottom: 20px;
   right: -60px;
@@ -702,5 +727,8 @@ body::-webkit-scrollbar-thumb {
   }
   #scrollTop {
     display: none;
+  }
+  #mScrollTop {
+    display: block;
   }
 }

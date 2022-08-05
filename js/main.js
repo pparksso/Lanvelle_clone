@@ -21,6 +21,7 @@ const tabsArr = [...tabs];
 
 const mainSwiper = new Swiper("#mainVisual", {
   speed: 1000,
+  // loop: true,
   autoplay: {
     delay: 5000,
   },
@@ -65,54 +66,11 @@ function resizeSwiper() {
     });
   }
 }
-// 인기키워드 생성
-const keywordBoxOpen = () => {
-  let screenWidth = body.clientWidth;
-  if (screenWidth < 1521) {
-    keywordBox.classList.add("on");
-  } else if (screenWidth > 1520) {
-    keywordBox.classList.remove("on");
-  }
-};
-//메인비쥬얼 이미지 변경
-const mainVisualChange = () => {
-  let screenWidth = body.clientWidth;
-  const imgChange = (name, num, alt, jpg, png) => {
-    name.forEach((item) => {
-      if (screenWidth < 1251) {
-        item.innerHTML = `<img src="../images/main/m_main0${num}.${jpg}" alt="${alt}" />`;
-      } else if (screenWidth > 1250) {
-        item.innerHTML = `<img src="../images/main/main0${num}.${png}" alt="${alt}" />`;
-      }
-    });
-  };
-  imgChange(mainImg01s, 1, "올리브영 구매인증 페이백 이벤트", "jpg", "jpg");
-  imgChange(mainImg02s, 2, "랑벨", "jpg", "png");
-};
-// 메인비쥬얼02 타이틀, 서브타이틀 변경
-const mainTitleChange = () => {
-  let screenWidth = body.clientWidth;
-  const titleChange = (name, m, pc) => {
-    name.forEach((item) => {
-      if (screenWidth < 1251) {
-        item.innerHTML = `${m}`;
-      } else if (screenWidth > 1250) {
-        item.innerHTML = `${pc}`;
-      }
-    });
-  };
-  titleChange(main02Titles, "LANBELLE X CHAHYUNSEUNG", "");
-  titleChange(main02Subtitles, "BLACK CICA", "Lanbelle x 차현승");
-};
-mainVisualChange();
+
 resizeSwiper();
-mainTitleChange();
 
 window.addEventListener("resize", () => {
   resizeSwiper();
-  keywordBoxOpen();
-  mainVisualChange();
-  mainTitleChange();
 });
 
 //컨텐츠 탭판넬
@@ -287,23 +245,19 @@ const contentsMaker = (title, area) => {
       const newBestSwiper = new Swiper("#newBest", {
         slidesPerView: 1,
         speed: 1000,
-        loop: true,
+        // loop: true,
         navigation: {
           nextEl: "#newBest .next",
           prevEl: "#newBest .prev",
         },
-        // Responsive breakpoints
         breakpoints: {
-          // when window width is >= 320px
           1750: {
             slidesPerView: 5,
             spaceBetween: 20,
           },
-          // when window width is >= 480px
           1400: {
             slidesPerView: 4,
           },
-          // when window width is >= 640px
           1280: {
             slidesPerView: 3,
           },

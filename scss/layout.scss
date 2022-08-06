@@ -580,7 +580,7 @@ span {
       transition: all 0.25s ease-in-out;
       &.open {
         padding: 20px 0 14px 0;
-        height: 120px;
+        height: 130px;
       }
       .infoLink {
         display: flex;
@@ -730,5 +730,15 @@ body::-webkit-scrollbar-thumb {
   }
   #mScrollTop {
     display: block;
+  }
+}
+@media all and(max-width:670px) {
+  #mFooter .tab .infoBox {
+    &.open {
+      height: 100%;
+    }
+    .infoLink {
+      width: 40%;
+    }
   }
 }

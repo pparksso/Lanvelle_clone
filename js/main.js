@@ -179,15 +179,24 @@ const contentsMaker = (title, area) => {
           <span class="percent"><strong>${percentage}</strong>%</span><span class="originalPrice">${originalPrice}원</span><span class="salePrice"><strong>${salePrice}</strong>원</span>
         </div>
         <div class="purchaseBox">
+          <div class="pc">
+            <ul>
+              <li>
+                <button><img src="../images/main/heat_btn.png" alt="찜하기" /></button>
+              </li>
+              <li>
+                <button><img src="../images/main/cart_btn.png" alt="장바구니에 넣기" /></button>
+              </li>
+            </ul>
+            <button class="card"><span class="material-icons"> credit_card </span>&nbsp;<span>바로구매</span></button>
+          </div>
+        <div class="m">
           <ul>
-            <li>
-              <button><img src="../images/main/heat_btn.png" alt="찜하기" /></button>
-            </li>
-            <li>
-              <button><img src="../images/main/cart_btn.png" alt="장바구니에 넣기" /></button>
-            </li>
-          </ul>
-          <button class="card"><span class="material-icons"> credit_card </span>&nbsp;<span>바로구매</span></button>
+              <li><button><img src="../images/main/prd_wish.svg" alt="위시리스트"></button></li>
+              <li><button><img src="../images/main/prd_cart.svg" alt="장바구니"></button></li>
+              <li><button><img src="../images/main/prd_buy.svg" alt="카드"></button></li>
+            </ul>
+        </div>
         </div>
         </div>
       </li>
@@ -211,15 +220,24 @@ const contentsMaker = (title, area) => {
           <span class="salePrice center"><strong>${item.salePrice}</strong>원</span>
         </div>
         <div class="purchaseBox">
+          <div class="pc">
+            <ul>
+              <li>
+                <button><img src="../images/main/heat_btn.png" alt="찜하기" /></button>
+              </li>
+              <li>
+                <button><img src="../images/main/cart_btn.png" alt="장바구니에 넣기" /></button>
+              </li>
+            </ul>
+            <button class="card"><span class="material-icons"> credit_card </span>&nbsp;<span>바로구매</span></button>
+          </div>
+          <div class="m">
           <ul>
-            <li>
-              <button><img src="../images/main/heat_btn.png" alt="찜하기" /></button>
-            </li>
-            <li>
-              <button><img src="../images/main/cart_btn.png" alt="장바구니에 넣기" /></button>
-            </li>
-          </ul>
-          <button class="card"><span class="material-icons"> credit_card </span>&nbsp;<span>바로구매</span></button>
+              <li><button><img src="../images/main/prd_wish.svg" alt="위시리스트"></button></li>
+              <li><button><img src="../images/main/prd_cart.svg" alt="장바구니"></button></li>
+              <li><button><img src="../images/main/prd_buy.svg" alt="카드"></button></li>
+            </ul>
+        </div>
         </div>
         </div>
       </li>
@@ -245,6 +263,7 @@ const contentsMaker = (title, area) => {
       const newBestSwiper = new Swiper("#newBest", {
         slidesPerView: 1,
         speed: 1000,
+        clickable: true,
         // loop: true,
         navigation: {
           nextEl: "#newBest .next",

@@ -811,18 +811,23 @@
       font-size: 30px;
       font-family: "Cormorant";
     }
-    .instagramWrap ul {
-      li {
-        padding: 5px;
-        @for $i from 1 to 4 {
-          &:nth-child(#{$i}) {
-            margin: 0;
+    .instagramWrap {
+      ul {
+        li {
+          padding: 5px;
+          @for $i from 1 to 4 {
+            &:nth-child(#{$i}) {
+              margin: 0;
+            }
+          }
+          a {
+            display: block;
+            width: 100%;
           }
         }
-        a {
-          display: block;
-          width: 100%;
-        }
+      }
+      .hashtagBox div {
+        bottom: -17px;
       }
     }
   }

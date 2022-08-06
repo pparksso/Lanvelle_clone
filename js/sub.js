@@ -2,8 +2,6 @@ const subDepth01s = document.querySelectorAll("#all .subDepth01");
 const subTabs = document.querySelectorAll("#all .subTab");
 const subTabsItems = document.querySelectorAll("#all .subTabItem");
 const countNum = document.querySelector("#shopList .countNum");
-const pickList = document.querySelector("#shopList .pickList");
-const pickBtn = document.querySelector("#shopList .pick");
 const pickItemList = document.querySelector("#shopList .itemList");
 const noItem = document.querySelector("#shopList .noItem");
 const pageNum = document.querySelector("#pageWrap .pageNum");
@@ -13,10 +11,6 @@ const subTabsArr = [...subTabs];
 const subTabItemsArr = [...subTabsItems];
 let tempHtml = "";
 let count = 0;
-// const numOfItem = 25;
-// const showItem = 12;
-// const showBtn = 3;
-// let nowPage = 1;
 
 subDepth01s.forEach((item, index) => {
   item.addEventListener("click", (e) => {
@@ -33,11 +27,6 @@ subDepth01s.forEach((item, index) => {
       }
     });
   });
-});
-
-pickBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  pickList.classList.toggle("on");
 });
 
 const sortMaker = () => {
@@ -143,6 +132,7 @@ const sortMaker = () => {
       subTabsItems.forEach((item, index) => {
         item.addEventListener("click", (e) => {
           e.preventDefault();
+          noItem.classList.remove("on");
           subTabItemsArr.forEach((arrEl) => {
             arrEl.classList.remove("on");
           });
@@ -150,7 +140,6 @@ const sortMaker = () => {
           pickItemList.innerHTML = "";
           countNum.innerHTML = "";
           tempHtml = "";
-          count = "";
           axios.get("../data/all.json").then((respond) => {
             const pickData = respond.data;
             const pickItems = pickData.items;
@@ -427,7 +416,7 @@ const sortMaker = () => {
                 }
                 pickItemList.innerHTML = tempHtml;
                 countNum.innerHTML = count;
-              } else if (idx.includes(index)) {
+              } else if (!idx.includes(index)) {
                 count = 0;
                 noItem.classList.add("on");
                 countNum.innerHTML = count;

@@ -742,3 +742,25 @@ body::-webkit-scrollbar-thumb {
     }
   }
 }
+@media all and(max-width:300px) {
+  #mobileHeader {
+    #mLogo {
+      text-align: center;
+      a img {
+        width: 80%;
+      }
+    }
+    .mUtilMenu {
+      button {
+        padding: 0;
+        &.mCart {
+          &::after {
+            width: 10px;
+            height: 10px;
+            top: -20%;
+          }
+        }
+      }
+    }
+  }
+}

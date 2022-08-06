@@ -832,3 +832,49 @@
     }
   }
 }
+@media all and(max-width:300px) {
+  #mainVisual {
+    ul li a .txtBox {
+      .subTitle {
+        font-size: 24px;
+        &.green {
+          font-size: 18px;
+        }
+      }
+    }
+    .pagination {
+      .next {
+        right: 37%;
+      }
+    }
+  }
+  #contents {
+    .tabs ul li {
+      font-size: 16px;
+    }
+    .pannel::before {
+      height: 160px;
+    }
+  }
+  #bestProduct .container .bestProductList .item .add .right {
+    .txtBox a {
+      .title {
+        font-size: 12px;
+      }
+      .desc {
+        font-size: 10px;
+      }
+    }
+    .priceBox {
+      .percent {
+        font-size: 10px;
+      }
+      .originalPrice {
+        font-size: 10px;
+      }
+      .salePrice strong {
+        font-size: 15px;
+      }
+    }
+  }
+}

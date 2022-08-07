@@ -3,7 +3,6 @@ const subTabs = document.querySelectorAll("#all .subTab");
 const subTabsItems = document.querySelectorAll("#all .subTabItem");
 const countNum = document.querySelector("#shopList .countNum");
 const pickItemList = document.querySelector("#shopList .itemList");
-const noItem = document.querySelector("#shopList .noItem");
 const pageNum = document.querySelector("#pageWrap .pageNum");
 
 const subDepth01Arr = [...subDepth01s];
@@ -441,7 +440,6 @@ const subSortMaker = () => {
       count = 0;
       countNum.innerHTML = "";
       tempHtml = "";
-      noItem.classList.remove("on");
       subTabItemsArr.forEach((arrEl) => {
         arrEl.classList.remove("on");
       });

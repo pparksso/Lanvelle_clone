@@ -1,7 +1,15 @@
-lanbelle 홈페이지 클론코딩 프로젝트    
-============ 
->main 1ea, sub(전제품보기) 1ea 반응형웹으로 제작   
+# lanbelle 반응형웹 클론코딩
 
+- 구현 : 메인, '전제품보기' 서브페이지 1개
+- 개발 기간 : 22.07.26 - 22.08.07(13days)
+- 사용기술 : javaScript
+- 라이브러리 : swiper
 
-- use : scss, javaScript, swiper Library   
-- 아이템들은 전부 json파일로 제작, axios를 사용하여 넣어주었음   
+## 특징
+
+- 데이터들은 분류별로 json으로 제작하여 axios를 사용해 화면에 뿌려주었습니다.
+- 서브페이지(전제품보기)의 필터는 json파일에 직접 해당되는 탭의 인덱스값을 넣어 분류해보았습니다. 이 부분은 더 좋은 방법이 없을지 더 고민하고있습니다.
+
+## 배포
+
+- https://resplendent-paletas-4be473.netlify.app
